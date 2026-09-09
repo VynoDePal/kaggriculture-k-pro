@@ -9,3 +9,6 @@ __pycache__/
 *.tar.gz
 .worktrees/
 .superpowers/
+
+# Raw campaign files are published as lossless deterministic gzip.
+results/*/matches.jsonl

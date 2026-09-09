@@ -4,6 +4,7 @@ import copy
 import hashlib
 import json
 import math
+import os
 import platform
 import statistics
 import time
@@ -204,6 +205,20 @@ def source_hashes(pairs):
     return {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in sorted(files)}
 
 
+def publish_results(output, rows):
+    """Publish a complete result file atomically, without a long-lived open path."""
+    output=Path(output)
+    temporary=output/'matches.tmp'
+    with temporary.open('x') as stream:
+        for row in rows:
+            stream.write(json.dumps(row, sort_keys=True)+'\n')
+        stream.flush()
+        os.fsync(stream.fileno())
+    # Hard-link creation is atomic and fails if the destination already exists.
+    os.link(temporary,output/'matches.jsonl')
+    temporary.unlink()
+
+
 def run_campaign(pairs, start_seed, output, workers=8):
     if not pairs or len({tuple(p) for p in pairs}) != len(pairs) or any(a == b for a, b in pairs):
         raise ValueError('Unique non-self pairs required')
@@ -227,13 +242,13 @@ def run_campaign(pairs, start_seed, output, workers=8):
     save_manifest()
     rows=[]
     try:
-        with ProcessPoolExecutor(max_workers=workers, max_tasks_per_child=1) as pool, (output/'matches.jsonl').open('x') as stream:
+        with ProcessPoolExecutor(max_workers=workers, max_tasks_per_child=1) as pool:
             for row in pool.map(run_match, jobs):
-                stream.write(json.dumps(row, sort_keys=True)+'\n');stream.flush()
                 rows.append(row)
                 if len(rows)%100 == 0:
                     print(f'{len(rows)}/{len(jobs)} matches complete', flush=True)
         validate_rows(rows, jobs)
+        publish_results(output, rows)
         persisted = [json.loads(line) for line in (output/'matches.jsonl').read_text().splitlines()]
         validate_rows(persisted, jobs)
         if persisted != rows:

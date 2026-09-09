@@ -34,7 +34,7 @@ python -m evaluation.campaign --seed-start 920000 --workers 8 \
   --pair candidates/k_pro6_care_fp.py k_pro/k_pro6.py \
   --pair candidates/k_pro6_care_fp.py k_pro/k_pro4_loader_fixed.py \
   --pair candidates/k_pro6_care_fp.py k_pro/k_pro2.py \
-  --output results/measure-care-a
+  --output results/measure-care-a-retry
 ```
 
 2400 matchs,200 seeds uniques. Les paires partagent leur banque, donc leurs résultats ne sont pas indépendants. La banque B930000–930199 est réservée à une confirmation sans retouche, conditionnée par le protocole pré-enregistré dans `docs/plans/2026-09-09-measure-care.md`.
@@ -42,12 +42,24 @@ python -m evaluation.campaign --seed-start 920000 --workers 8 \
 ## Artefacts et interprétation
 
 - `manifest.json` : sources/moteur/config/seeds, version Python, statut et empreintes des résultats. Seul `COMPLETE` prouve l'achèvement ; `RUNNING` ou `FAILED` ne doit pas être résumé comme campagne complète.
-- `matches.jsonl` : clé de chaque match, scores, marge, commandes émises, soins trop tardifs proposés, temps de décision et commerces finaux.
+- `matches.jsonl` : clé de chaque match, scores, marge, commandes émises, soins trop tardifs proposés, temps de décision et commerces finaux. Dans Git, ce fichier est conservé sans perte sous `matches.jsonl.gz` ; la sortie locale du runner reste du JSONL.
 - `summary.json` : victoires, marges, sièges et IC95 calculés sur200 moyennes par seed (deux sièges), Student199.
+
+Pour lire les résultats publiés sans extraction :
+
+```python
+import gzip, hashlib, json
+from pathlib import Path
+folder = Path("results/measure-care-a-retry")
+raw = gzip.decompress((folder / "matches.jsonl.gz").read_bytes())
+manifest = json.loads((folder / "manifest.json").read_text())
+assert hashlib.sha256(raw).hexdigest() == manifest["results_sha256"]
+rows = [json.loads(line) for line in raw.splitlines()]
+```
 
 Le calcul des IC est descriptif pour chaque paire. Ne pas choisir le meilleur résultat parmi plusieurs variantes puis le présenter comme une confirmation indépendante. Ne pas agréger plusieurs adversaires comme des observations indépendantes.
 
-Le moteur résout719 décisions et720 états, initial compris. Le seed est retiré de la configuration visible. Chaque match utilise un nouveau processus ; les imports du chargement sont restaurés et les observations/configurations sont copiées. Une action de forme invalide, une mutation ou un résultat absent/dupliqué fait échouer l'évaluation. Les emplacements de marché vides sont conservés : FL/FM les utilisent pour préserver les indices de résolution simultanée. Les résultats écrits sont relus et validés avant COMPLETE. Les commandes comptées ne sont pas toutes des actions économiquement utiles ; les soins classés tardifs ne sont pas valorisés comme des pertes monétaires.
+Le moteur résout719 décisions et720 états, initial compris. Le seed est retiré de la configuration visible. Chaque match utilise un nouveau processus ; les imports du chargement sont restaurés et les observations/configurations sont copiées. Une action de forme invalide, une mutation ou un résultat absent/dupliqué fait échouer l'évaluation. Les emplacements de marché vides sont conservés : FL/FM les utilisent pour préserver les indices de résolution simultanée. Les résultats sont d’abord collectés en mémoire, puis publiés en une seule écriture atomique sans écrasement (lien physique local), relus et validés avant COMPLETE. Le système de fichiers doit prendre en charge les liens physiques. Aucun fichier de résultat partiel n’est présenté comme complet. Les commandes comptées ne sont pas toutes des actions économiquement utiles ; les soins classés tardifs ne sont pas valorisés comme des pertes monétaires.
 
 Le même seed ne fige pas les commerces lorsque les cases vides changent : le RNG des mauvaises herbes et du commerce journalier est partagé dans le moteur officiel. Les deux sièges et les diagnostics par trajectoire restent nécessaires.
 
@@ -55,4 +67,12 @@ Le même seed ne fige pas les commerces lorsque les cases vides changent : le RN
 
 Le banc appelle l'interpréteur et le sélecteur de callable officiels, avec orchestration locale. Un hook d'audit Python interdit les sockets, requêtes HTTP, appels ctypes et processus externes pendant le chargement et les décisions. Il est destiné aux politiques K Pro autonomes de confiance : ce n'est pas une frontière de sécurité contre du code hostile. Le banc n'émule ni le sandbox ni les limites de temps/overage du framework distant. Il n'établit pas une parité intégrale avec tous les comportements du package `kaggle_environments`. Les temps de décision sous charge locale ne garantissent pas les délais sur Kaggle. Les sources officielles sont conservées exactement ; deux fonctions auxiliaires sont extraites par AST pour éviter les dépendances externes. Le pont moteur ne modifie pas `sys.modules` ; le chargeur restaure son état après les imports de politique.
 
+Deux limites opérationnelles mineures restent ouvertes : après une exception de match, le pool peut finir des tâches déjà en file avant d’écrire FAILED ; une erreur de génération du candidat peut laisser un fichier de sortie vide. Relancer dans une nouvelle destination et ne consommer qu’un candidat reconstruit avec succès et vérifié. Ces limites ne changent pas les scores d’une campagne COMPLETE.
+
 Le panel interne K Pro contrôle les changements de la série ; il ne prouve pas la compétitivité contre les adversaires actuels du ladder. Les traces économiques et confrontations récentes constituent l'étape suivante du plan validé.
+
+## Incident d’écriture de la première tentative A
+
+`results/measure-care-a/manifest.json` conserve le statut FAILED : les2400 résultats ont passé la validation en mémoire, mais seuls deux étaient visibles au chemin JSONL lors de la relecture. Aucun score de cette tentative n’est utilisé pour décider. Le mécanisme d’un fichier ouvert puis remplacé reproduit exactement ce symptôme ; l’origine du remplacement dans cet environnement reste non identifiée. Les sondes simples de concurrence ne l’ont pas reproduit spontanément.
+
+Le runner conserve désormais les lignes en mémoire jusqu’à la publication atomique finale, puis les relit entièrement. La nouvelle tentative `measure-care-a-retry` utilise exactement les mêmes graines, politiques et règles de décision. Seule l’écriture des résultats change. La tentative échouée est conservée séparément, sans être écrasée.

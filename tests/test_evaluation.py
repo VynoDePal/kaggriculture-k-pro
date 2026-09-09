@@ -8,12 +8,30 @@ from pathlib import Path
 
 from evaluation.engine import load_engine, load_policy, new_game
 from evaluation import engine as bridge
-from evaluation.campaign import run_match, summarize, validate_rows, run_campaign, _validate_action
+from evaluation.campaign import run_match, summarize, validate_rows, run_campaign, _validate_action, publish_results
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class EvaluationTests(unittest.TestCase):
+    def test_result_publication_is_atomic_and_never_overwrites(self):
+        with tempfile.TemporaryDirectory() as temp:
+            folder=Path(temp)
+            def interrupted():
+                yield {'seed':1}
+                raise RuntimeError('interrupted serialization')
+            with self.assertRaisesRegex(RuntimeError,'interrupted serialization'):
+                publish_results(folder,interrupted())
+            self.assertFalse((folder/'matches.jsonl').exists())
+        with tempfile.TemporaryDirectory() as temp:
+            folder=Path(temp)
+            rows=[{'seed':1},{'seed':2}]
+            publish_results(folder,rows)
+            before=(folder/'matches.jsonl').read_bytes()
+            self.assertEqual([json.loads(l) for l in before.splitlines()],rows)
+            with self.assertRaises(FileExistsError):publish_results(folder,[{'seed':3}])
+            self.assertEqual((folder/'matches.jsonl').read_bytes(),before)
+
     def test_policy_network_is_blocked_before_connection(self):
         with tempfile.TemporaryDirectory() as temp:
             p=Path(temp)/'network.py'
