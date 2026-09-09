@@ -76,4 +76,6 @@ Le plan validé est conservé dans `docs/plans/2026-09-09-measure-care.md`.
 Le nouveau banc autonome et son protocole sont décrits dans
 `docs/evaluation.md`. Il conserve les témoins archivés et ajoute un candidat
 CARE expérimental dans `candidates/`, sans modifier K Pro6 livré.
-Les résultats des campagnes doivent être consultés avant toute promotion.
+Les deux banques totalisent 4 400 matchs valides. Le signal sur les victoires
+est favorable, mais le critère de marge en confirmation n’est pas satisfait :
+le candidat reste expérimental. Voir le [rapport et la décision](docs/reports/2026-09-09-measure-care.md).
