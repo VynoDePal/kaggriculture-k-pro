@@ -1,19 +1,59 @@
 """Evaluation boundaries: wrong loader, termination, mutated inputs, invalid samples."""
 import copy
 import json
+import platform
 import shutil
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from evaluation.engine import load_engine, load_policy, new_game
 from evaluation import engine as bridge
-from evaluation.campaign import run_match, summarize, validate_rows, run_campaign, _validate_action, publish_results
+from evaluation.campaign import run_match, summarize, validate_rows, run_campaign, _validate_action, publish_results, save_checkpoint, load_checkpoints, source_hashes
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class EvaluationTests(unittest.TestCase):
+    def test_checkpoints_verify_checksum_identity_and_exclusivity(self):
+        job={'candidate':'a','opponent':'b','seed':123,'seat':0}
+        row=dict(job,margin=0,scores=[1,1],decisions_per_player=719,max_seconds=[0,0],
+                 total_seconds=[0,0],commands=[{'PASS':719},{'PASS':719}],late_care_commands=[0,0],shops=[])
+        with tempfile.TemporaryDirectory() as temp:
+            folder=Path(temp);(folder/'checkpoints').mkdir()
+            save_checkpoint(folder,0,row)
+            self.assertEqual(load_checkpoints(folder,[job]),{0:row})
+            with self.assertRaises(FileExistsError):save_checkpoint(folder,0,row)
+            with self.assertRaises(ValueError):load_checkpoints(folder,[dict(job,seed=124)])
+            path=folder/'checkpoints'/'000000.json'
+            envelope=json.loads(path.read_text());envelope['row']['scores']=[2,2]
+            path.write_text(json.dumps(envelope))
+            with self.assertRaisesRegex(ValueError,'checksum'):load_checkpoints(folder,[job])
+
+    def test_resume_finalizes_durable_results_without_replaying_and_checks_sources(self):
+        pairs=[['k_pro/k_pro2.py','k_pro/k_pro6.py']];seeds=list(range(200))
+        with tempfile.TemporaryDirectory() as temp:
+            folder=Path(temp);(folder/'checkpoints').mkdir()
+            manifest=dict(status='RUNNING',seeds=seeds,pairs=pairs,source_sha256=source_hashes(pairs),
+                python=platform.python_version(),workers=1,expected_matches=400,checkpoint_format=1,
+                configuration=json.loads((bridge.VENDOR/'kaggriculture.json').read_text())['configuration'])
+            (folder/'manifest.json').write_text(json.dumps(manifest))
+            for s in seeds:
+                for seat in (0,1):
+                    row=dict(candidate=pairs[0][0],opponent=pairs[0][1],seed=s,seat=seat,margin=0,
+                        scores=[1,1],decisions_per_player=719,max_seconds=[0,0],total_seconds=[0,0],
+                        commands=[{'PASS':719},{'PASS':719}],late_care_commands=[0,0],shops=[])
+                    save_checkpoint(folder,s*2+seat,row)
+            with self.assertRaisesRegex(ValueError,'identity'):
+                run_campaign(pairs,1,folder,workers=1,resume=True)
+            with patch('evaluation.campaign.ProcessPoolExecutor',side_effect=AssertionError('replayed')):
+                report=run_campaign(pairs,0,folder,workers=1,resume=True)
+            self.assertEqual(next(iter(report.values()))['games'],400)
+            self.assertEqual(json.loads((folder/'manifest.json').read_text())['status'],'COMPLETE')
+            with self.assertRaisesRegex(ValueError,'COMPLETE'):
+                run_campaign(pairs,0,folder,workers=1,resume=True)
+
     def test_result_publication_is_atomic_and_never_overwrites(self):
         with tempfile.TemporaryDirectory() as temp:
             folder=Path(temp)

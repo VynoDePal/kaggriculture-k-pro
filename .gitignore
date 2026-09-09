@@ -12,3 +12,4 @@ __pycache__/
 
 # Raw campaign files are published as lossless deterministic gzip.
 results/*/matches.jsonl
+results/*/checkpoints/

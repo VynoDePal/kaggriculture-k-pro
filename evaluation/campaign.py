@@ -7,6 +7,7 @@ import math
 import os
 import platform
 import statistics
+import tempfile
 import time
 from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor
@@ -205,50 +206,106 @@ def source_hashes(pairs):
     return {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in sorted(files)}
 
 
+def _atomic_bytes(path, data):
+    """Publish a closed, flushed file exclusively; interruption leaves no target."""
+    path=Path(path)
+    fd,name=tempfile.mkstemp(dir=path.parent,prefix='.'+path.name+'.',suffix='.tmp')
+    temporary=Path(name)
+    try:
+        with os.fdopen(fd,'wb') as stream:
+            stream.write(data);stream.flush();os.fsync(stream.fileno())
+        os.link(temporary,path)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
 def publish_results(output, rows):
-    """Publish a complete result file atomically, without a long-lived open path."""
-    output=Path(output)
-    temporary=output/'matches.tmp'
-    with temporary.open('x') as stream:
-        for row in rows:
-            stream.write(json.dumps(row, sort_keys=True)+'\n')
-        stream.flush()
-        os.fsync(stream.fileno())
-    # Hard-link creation is atomic and fails if the destination already exists.
-    os.link(temporary,output/'matches.jsonl')
-    temporary.unlink()
+    data=''.join(json.dumps(row,sort_keys=True)+'\n' for row in rows).encode()
+    _atomic_bytes(Path(output)/'matches.jsonl',data)
 
 
-def run_campaign(pairs, start_seed, output, workers=8):
+def save_checkpoint(output, index, row):
+    digest=hashlib.sha256(json.dumps(row,sort_keys=True).encode()).hexdigest()
+    envelope=dict(sha256=digest,row=row)
+    _atomic_bytes(Path(output)/'checkpoints'/f'{index:06d}.json',
+                  (json.dumps(envelope,sort_keys=True)+'\n').encode())
+
+
+def load_checkpoints(output, jobs):
+    recovered={}
+    for path in sorted((Path(output)/'checkpoints').glob('*.json')):
+        if not path.stem.isdigit():raise ValueError('Invalid checkpoint filename')
+        index=int(path.stem)
+        if index>=len(jobs) or path.name!=f'{index:06d}.json':
+            raise ValueError('Unexpected checkpoint index')
+        envelope=json.loads(path.read_text())
+        if not isinstance(envelope,dict) or set(envelope)!={'sha256','row'}:
+            raise ValueError('Invalid checkpoint fields')
+        row=envelope['row']
+        digest=hashlib.sha256(json.dumps(row,sort_keys=True).encode()).hexdigest()
+        if envelope['sha256']!=digest:raise ValueError('Checkpoint checksum mismatch')
+        validate_rows([row],[jobs[index]])
+        recovered[index]=row
+    return recovered
+
+
+def run_campaign(pairs, start_seed, output, workers=8, resume=False):
     if not pairs or len({tuple(p) for p in pairs}) != len(pairs) or any(a == b for a, b in pairs):
         raise ValueError('Unique non-self pairs required')
     if type(start_seed) is not int or not 1 <= workers <= 8:
         raise ValueError('Invalid seed or worker count')
     verify_vendor()
+    pairs=[list(pair) for pair in pairs]
     seeds = list(range(start_seed, start_seed + SEED_COUNT))
     jobs = [dict(candidate=a, opponent=b, seed=seed, seat=seat)
             for a, b in pairs for seed in seeds for seat in (0, 1)]
     output = Path(output)
     hashes = source_hashes(pairs)
-    output.mkdir(parents=True, exist_ok=False)
-    manifest = dict(status='RUNNING', seeds=seeds, pairs=pairs, source_sha256=hashes,
+    identity = dict(seeds=seeds, pairs=pairs, source_sha256=hashes,
                     python=platform.python_version(), workers=workers, expected_matches=len(jobs),
                     configuration=json.loads((VENDOR/'kaggriculture.json').read_text())['configuration'],
-                    limitation='Official interpreter and loader, local orchestration without Kaggle sandbox/time enforcement')
+                    checkpoint_format=1)
+    if resume:
+        manifest=json.loads((output/'manifest.json').read_text())
+        if manifest.get('status')=='COMPLETE':raise ValueError('Cannot resume COMPLETE campaign')
+        if manifest.get('status') not in ('RUNNING','FAILED') or any(manifest.get(k)!=v for k,v in identity.items()):
+            raise ValueError('Resume identity mismatch')
+        if not (output/'checkpoints').is_dir():raise ValueError('Missing checkpoint directory')
+        recovered=load_checkpoints(output,jobs)
+        manifest.setdefault('recoveries',[]).append(dict(previous_status=manifest['status'],previous_error=manifest.get('error'),checkpoint_matches=len(recovered)))
+        manifest['resume_count']=manifest.get('resume_count',0)+1
+    else:
+        output.mkdir(parents=True, exist_ok=False)
+        (output/'checkpoints').mkdir()
+        manifest=dict(identity,limitation='Official interpreter and loader, local orchestration without Kaggle sandbox/time enforcement')
+        recovered={}
+    manifest.update(status='RUNNING',recovered_matches=len(recovered))
+    manifest.pop('error',None)
     def save_manifest():
         temp=output/'manifest.tmp'
         temp.write_text(json.dumps(manifest, indent=2)+'\n')
         temp.replace(output/'manifest.json')
     save_manifest()
-    rows=[]
+    rows=list(recovered.values())
     try:
-        with ProcessPoolExecutor(max_workers=workers, max_tasks_per_child=1) as pool:
-            for row in pool.map(run_match, jobs):
-                rows.append(row)
-                if len(rows)%100 == 0:
-                    print(f'{len(rows)}/{len(jobs)} matches complete', flush=True)
+        indices={result_key(job):i for i,job in enumerate(jobs)}
+        pending=[job for i,job in enumerate(jobs) if i not in recovered]
+        if pending:
+            with ProcessPoolExecutor(max_workers=workers, max_tasks_per_child=1) as pool:
+                for row in pool.map(run_match, pending):
+                    index=indices[result_key(row)]
+                    validate_rows([row],[jobs[index]])
+                    save_checkpoint(output,index,row)
+                    recovered[index]=row
+                    rows.append(row)
+                    if len(rows)%100 == 0:
+                        print(f'{len(rows)}/{len(jobs)} matches durably recorded', flush=True)
+        # Read every closed checkpoint before assembling the canonical artifact.
+        persisted_checkpoints=load_checkpoints(output,jobs)
+        if persisted_checkpoints!=recovered:raise ValueError('Checkpoint readback differs from computed results')
+        rows=[persisted_checkpoints[i] for i in range(len(jobs))]
         validate_rows(rows, jobs)
-        publish_results(output, rows)
+        if not (output/'matches.jsonl').exists():publish_results(output, rows)
         persisted = [json.loads(line) for line in (output/'matches.jsonl').read_text().splitlines()]
         validate_rows(persisted, jobs)
         if persisted != rows:
@@ -256,10 +313,14 @@ def run_campaign(pairs, start_seed, output, workers=8):
         if source_hashes(pairs) != hashes:
             raise ValueError('Sources changed during campaign')
         summary = {a+' vs '+b: summarize([r for r in rows if (r['candidate'],r['opponent'])==(a,b)]) for a,b in pairs}
-        (output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+        summary_path=output/'summary.json'
+        summary_bytes=(json.dumps(summary,indent=2)+'\n').encode()
+        if summary_path.exists():
+            if summary_path.read_bytes()!=summary_bytes:raise ValueError('Existing summary mismatch')
+        else:_atomic_bytes(summary_path,summary_bytes)
         manifest.update(status='COMPLETE',completed_matches=len(rows),
                         results_sha256=hashlib.sha256((output/'matches.jsonl').read_bytes()).hexdigest(),
-                        summary_sha256=hashlib.sha256((output/'summary.json').read_bytes()).hexdigest())
+                        summary_sha256=hashlib.sha256(summary_path.read_bytes()).hexdigest())
     except BaseException as error:
         manifest.update(status='FAILED',completed_matches=len(rows),error=type(error).__name__+': '+str(error))
         save_manifest()
@@ -274,8 +335,9 @@ def main():
     parser.add_argument('--seed-start',type=int,required=True)
     parser.add_argument('--output',required=True)
     parser.add_argument('--workers',type=int,default=8)
+    parser.add_argument('--resume',action='store_true',help='Recover only verified missing matches with identical campaign identity')
     args=parser.parse_args()
-    run_campaign(args.pair,args.seed_start,args.output,args.workers)
+    run_campaign(args.pair,args.seed_start,args.output,args.workers,args.resume)
 
 
 if __name__=='__main__':main()
