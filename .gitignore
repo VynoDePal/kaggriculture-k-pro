@@ -7,3 +7,5 @@ __pycache__/
 *.log
 *.zip
 *.tar.gz
+.worktrees/
+.superpowers/
