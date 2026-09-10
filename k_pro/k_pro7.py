@@ -925,7 +925,7 @@ def market_orders(obs, st, shed):
 def decide(obs, st):
     player = obs['player']
     step = obs.get('step', obs['day'] * 24 + obs['hour'])
-    if step >= 718:
+    if step >= 720 - 24:
         prices = obs['market']['prices']
         orders = []
         for item, count in obs['private']['shed'].items():
