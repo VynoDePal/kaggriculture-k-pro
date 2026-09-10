@@ -829,7 +829,8 @@ def market_orders(obs, st, shed):
     for item in items:
         have = shed.get(item, 0)
         keep = 0
-        is_front_running = opp_ready.get(item, 0) >= 4
+        premium_items = {'MELON', 'STRAWBERRY', 'MILK', 'WOOL', 'TOMATO'}
+        is_front_running = (item in premium_items) and (opp_ready.get(item, 0) >= 4)
         if day < 29 and not is_front_running:
             if item == 'WHEAT':
                 keep = max(0, math.ceil(herd * (1.5 if hour < 16 else 0.8)) - carry[item])
