@@ -816,11 +816,21 @@ def market_orders(obs, st, shed):
     if day == 28:
         final_feeds = sum((any((a[0] == 'FEED' for a in todo)) for todo, _ in tasks(obs, st).values()))
     projected = sum(shed.values()) + sum(carry.values())
+    opp_id = 1 - obs['player']
+    opp = obs['farms'][opp_id]
+    opp_ready = {}
+    for row in opp['tiles']:
+        for t in row:
+            if isinstance(t, dict) and t.get('yield_units', 0) > 0:
+                c = t.get('crop') or (t.get('animal') and ANIMAL.get(t.get('animal'), [None]*5)[4])
+                if c:
+                    opp_ready[c] = opp_ready.get(c, 0) + t.get('yield_units')
     items = sorted(PARAMS, key=lambda p: (-prices[p], p))
     for item in items:
         have = shed.get(item, 0)
         keep = 0
-        if day < 29:
+        is_front_running = opp_ready.get(item, 0) >= 4
+        if day < 29 and not is_front_running:
             if item == 'WHEAT':
                 keep = max(0, math.ceil(herd * (1.5 if hour < 16 else 0.8)) - carry[item])
             if item == 'WHEAT' and final_feeds is not None:
@@ -832,13 +842,17 @@ def market_orders(obs, st, shed):
         if not amount:
             continue
         floor = max(1, int(PARAMS[item][0] * 0.05))
-        if day >= 28 or projected > 85 or money < 300:
+        if day >= 28 or projected > 85 or money < 300 or is_front_running:
             floor = 1
-        if day < 28 and hour > 2 and (item in ('MILK', 'WOOL', 'STRAWBERRY')) and (projected < 60) and (money > 1000):
+        if day < 28 and hour > 2 and (item in ('MILK', 'WOOL', 'STRAWBERRY')) and (projected < 60) and (money > 1000) and not is_front_running:
             floor = max(floor, int(forecast(obs, item, 1) * 0.8))
+        town_demand = demand(obs.get('town', {}), item)
+        sell_limit = amount
+        if town_demand > 10 and not is_front_running and day < 28:
+            sell_limit = min(amount, 3)
         qty = 0
         revenue = 0
-        while qty < amount and price(item, mi[item] + qty) >= floor:
+        while qty < sell_limit and price(item, mi[item] + qty) >= floor:
             revenue += price(item, mi[item] + qty)
             qty += 1
         if qty:
