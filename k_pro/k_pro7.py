@@ -925,17 +925,6 @@ def market_orders(obs, st, shed):
 def decide(obs, st):
     player = obs['player']
     step = obs.get('step', obs['day'] * 24 + obs['hour'])
-    if step >= 720 - 24:
-        prices = obs['market']['prices']
-        orders = []
-        for item, count in obs['private']['shed'].items():
-            if count > 0 and item in prices:
-                orders.append(['SELL', item, count])
-        orders.sort(key=lambda x: prices.get(x[1], 0) * x[2], reverse=True)
-        me = obs['farms'][player]
-        farmer_action = ['DROP'] if tuple(me['farmer']) in SHED else ['PASS']
-        hands_actions = [['DROP'] if tuple(pos) in SHED else ['PASS'] for pos in me['hands']]
-        return {'farmer': farmer_action, 'hands': hands_actions, 'market': orders[:10]}
     structural = st.get('quadrants') != len(obs['farms'][player]['unlocked_quadrants']) or False
     if st['day'] != obs['day'] or structural or (obs['hour'] in (4, 12) and obs['farms'][player]['money'] > 400):
         keep_routes = st.get('day') == obs['day'] and st.get('quadrants') == len(obs['farms'][player]['unlocked_quadrants']) and structural
@@ -963,6 +952,15 @@ def decide(obs, st):
         actions, shed = idle_deliveries(obs, actions, shed)
         orders = market_orders(obs, st, shed)
     st['last_step'] = step
+    if step >= 720 - 24:
+        prices = obs['market']['prices']
+        orders = []
+        for item, count in obs['private']['shed'].items():
+            if count > 0 and item in prices:
+                orders.append(['SELL', item, count])
+        orders.sort(key=lambda x: prices.get(x[1], 0) * x[2], reverse=True)
+        orders = orders[:10]
+        me = obs['farms'][player]
     return {'farmer': actions[0], 'hands': actions[1:], 'market': orders}
 
 OPENING_TAPE = {
