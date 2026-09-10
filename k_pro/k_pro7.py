@@ -963,9 +963,18 @@ def decide(obs, st):
     st['last_step'] = step
     return {'farmer': actions[0], 'hands': actions[1:], 'market': orders}
 
+OPENING_TAPE = {
+    # 0: {'farmer': ['SOUTH'], 'hands': [], 'market': [['HIRE'], ['BUY_SEED', 'CARROT', 4]]},
+    # 1: {'farmer': ['PLANT', 'CARROT'], 'hands': [['SOUTH']], 'market': []},
+}
 def agent(obs, configuration=None):
     player = obs['player']
     step = obs.get('step', obs['day'] * 24 + obs['hour'])
+    if step in OPENING_TAPE:
+        if player not in _STATE: 
+            _STATE[player] = {'day': obs['day']}
+        _STATE[player]['last_step'] = step
+        return OPENING_TAPE[step]
     if player not in _STATE or step <= _STATE[player].get('last_step', -1):
         _STATE[player] = {'day': -1}
     st = _STATE[player]
