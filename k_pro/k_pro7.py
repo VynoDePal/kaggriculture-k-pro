@@ -4,7 +4,7 @@ Independent switches permit paired ablation; public observations only.
 """
 import math
 import copy
-CFG = {'early_melon_delivery': True, 'idle_overflow_delivery': True, 'project_market': False, 'wheat_autonomy': False, 'melon_replant_roi': False, 'fourth_quadrant': False, 'near_opening_melons': True}
+CFG = {'early_melon_delivery': True, 'idle_overflow_delivery': True, 'project_market': True, 'wheat_autonomy': True, 'melon_replant_roi': False, 'fourth_quadrant': False, 'near_opening_melons': False}
 CROP = {'WHEAT': (10, 2, 4, 0, 6), 'CARROT': (20, 2, 3, 0, 4), 'TOMATO': (50, 8, 8, 1, 4), 'STRAWBERRY': (100, 10, 10, 2, 4), 'MELON': (80, 10, 12, 0, 6)}
 ANIMAL = {'COW': (400, 8, 2, 6, 'MILK'), 'SHEEP': (500, 6, 3, 6, 'WOOL'), 'GOOSE': (300, 4, 1, 4, 'EGG')}
 PARAMS = {'WHEAT': (25, 400, 'sqrt', 0.8, 'log', 0.2), 'CARROT': (35, 450, 'hinge', 1, 'sqrt', 0.7), 'TOMATO': (60, 200, 'hinge', 0.4, 'sqrt', 0.6), 'STRAWBERRY': (120, 100, 'sqrt', 0.7, 'linear', 1.6), 'MELON': (250, 300, 'log', 0.2, 'sq', 3.6), 'EGG': (50, 332, 'hinge', 0.4, 'log', 0.2), 'MILK': (160, 122, 'sqrt', 0.6, 'linear', 1.6), 'WOOL': (200, 105, 'log', 0.2, 'sq', 3.2), 'FERTILIZER': (100, 200, 'linear', 0.4, 'linear', 0.4)}
