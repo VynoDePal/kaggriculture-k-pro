@@ -910,6 +910,16 @@ def market_orders(obs, st, shed):
 def decide(obs, st):
     player = obs['player']
     step = obs.get('step', obs['day'] * 24 + obs['hour'])
+    if step >= 718:
+        orders = []
+        for item, count in obs['private']['shed'].items():
+            if count > 0:
+                orders.append(['SELL', item, count])
+        prices = obs['market']['prices']
+        orders.sort(key=lambda x: prices.get(x[1], 0) * x[2], reverse=True)
+        me = obs['farms'][player]
+        hands_actions = [['PASS']] * len(me['hands'])
+        return {'farmer': ['PASS'], 'hands': hands_actions, 'market': orders[:10]}
     structural = st.get('quadrants') != len(obs['farms'][player]['unlocked_quadrants']) or False
     if st['day'] != obs['day'] or structural or (obs['hour'] in (4, 12) and obs['farms'][player]['money'] > 400):
         keep_routes = st.get('day') == obs['day'] and st.get('quadrants') == len(obs['farms'][player]['unlocked_quadrants']) and structural
