@@ -952,15 +952,6 @@ def decide(obs, st):
         actions, shed = idle_deliveries(obs, actions, shed)
         orders = market_orders(obs, st, shed)
     st['last_step'] = step
-    if step >= 720 - 24:
-        prices = obs['market']['prices']
-        orders = []
-        for item, count in obs['private']['shed'].items():
-            if count > 0 and item in prices:
-                orders.append(['SELL', item, count])
-        orders.sort(key=lambda x: prices.get(x[1], 0) * x[2], reverse=True)
-        orders = orders[:10]
-        me = obs['farms'][player]
     return {'farmer': actions[0], 'hands': actions[1:], 'market': orders}
 
 OPENING_TAPE = {
