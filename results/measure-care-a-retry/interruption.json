@@ -1,0 +1,7 @@
+{
+  "status": "INCOMPLETE",
+  "reason": "Execution environment reset; exec cell and process session disappeared; no campaign process or final results remained.",
+  "observed_progress_at_least": 1000,
+  "usable_results": 0,
+  "decision_use": "excluded"
+}

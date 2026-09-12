@@ -60,10 +60,22 @@ pas une application installable ni une suite de lancement complète.
 python -B -m unittest discover -s tests -v
 ```
 
-Ce contrôle compile les sources sans les exécuter, vérifie leurs empreintes et
-le chargement des cinq fichiers autonomes. Il ne mesure pas leur performance.
+Les tests d’archive compilent les sources, vérifient leurs empreintes et le
+chargement des cinq fichiers autonomes. La suite inclut désormais les tests du
+banc et de la correction CARE avec le moteur officiel. Elle ne remplace pas
+les campagnes de performance.
 Le développement et les derniers contrôles détaillés ont utilisé Python 3.14.
 L’équivalence numérique entre toutes les versions de Python n’est pas certifiée.
 
 La série reste en développement. Les notes anciennes peuvent décrire des
 tentatives non retenues ; elles ne changent pas l’état des versions ci-dessus.
+
+## Développement : mesure et horizon CARE
+
+Le plan validé est conservé dans `docs/plans/2026-09-09-measure-care.md`.
+Le nouveau banc autonome et son protocole sont décrits dans
+`docs/evaluation.md`. Il conserve les témoins archivés et ajoute un candidat
+CARE expérimental dans `candidates/`, sans modifier K Pro6 livré.
+Les deux banques totalisent 4 400 matchs valides. Le signal sur les victoires
+est favorable, mais le critère de marge en confirmation n’est pas satisfait :
+le candidat reste expérimental. Voir le [rapport et la décision](docs/reports/2026-09-09-measure-care.md).

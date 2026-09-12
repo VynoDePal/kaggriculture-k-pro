@@ -1,0 +1,85 @@
+{
+  "status": "INCONCLUSIVE_FOR_PROMOTION",
+  "promoted": false,
+  "bank_a_trigger_met": true,
+  "bank_b_criteria": {
+    "independent_bank_complete": true,
+    "rate_lower95_above_half": true,
+    "margin_lower95_above_zero": false,
+    "no_clear_witness_regression": true,
+    "unchanged_sources_between_banks": true
+  },
+  "reason": "Independent B mean-margin CI95 includes zero; pre-registered conjunction not met. Positive win-rate evidence is retained, not treated as proof of no effect.",
+  "candidate": "candidates/k_pro6_care_fp.py",
+  "candidate_sha256": "b153c81fbabd0ac8f8f7b9eb69515a2f2eb4b5086d934701497dff6f75693af1",
+  "valid_matches": 4400,
+  "unique_seeds": 400,
+  "tests_passed": 22,
+  "bank_b_primary": {
+    "seeds": 200,
+    "games": 400,
+    "wins": 222,
+    "losses": 172,
+    "ties": 6,
+    "mean_margin": 39.96,
+    "margin_ci95": [
+      -10.171431474583763,
+      90.09143147458377
+    ],
+    "win_rate": 0.5625,
+    "win_rate_ci95": [
+      0.5126161896618788,
+      0.6123838103381212
+    ],
+    "seats": {
+      "0": {
+        "wins": 113,
+        "mean_margin": 50.575,
+        "margin_ci95": [
+          -132.48733455881097,
+          233.637334558811
+        ],
+        "win_rate_ci95": [
+          0.5038763692954263,
+          0.6411236307045737
+        ]
+      },
+      "1": {
+        "wins": 109,
+        "mean_margin": 29.345,
+        "margin_ci95": [
+          -169.42804101036452,
+          228.11804101036452
+        ],
+        "win_rate_ci95": [
+          0.4835213467201145,
+          0.6214786532798855
+        ]
+      }
+    },
+    "ci_method": "Student t199 on 200 seed clusters; one opponent per summary"
+  },
+  "diagnostic_seeds": [
+    {
+      "seed": 930053,
+      "paired_mean_margin": -1592.0
+    },
+    {
+      "seed": 930132,
+      "paired_mean_margin": -1317.0
+    },
+    {
+      "seed": 930051,
+      "paired_mean_margin": -1027.0
+    },
+    {
+      "seed": 930125,
+      "paired_mean_margin": -926.0
+    },
+    {
+      "seed": 930184,
+      "paired_mean_margin": -866.0
+    }
+  ],
+  "diagnostic_only": "Seeds chosen after observing B losses; future changes informed by these require new independent validation seeds."
+}
