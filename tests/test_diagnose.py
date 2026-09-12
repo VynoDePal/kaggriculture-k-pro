@@ -50,6 +50,12 @@ class DiagnoseTests(unittest.TestCase):
         self.assertTrue(result['same_farms_except_money'])
         self.assertTrue(result['same_private_sheds'])
 
+    def test_order_swap_rejects_slots_outside_recorded_market(self):
+        for slots in ((-1, 2), (10, 2)):
+            with self.subTest(slots=slots), self.assertRaisesRegex(
+                    ValueError, 'outside recorded market orders'):
+                analyze_order_swap(TRACE, player=0, step=672, slots=slots)
+
     def test_analysis_localizes_first_action_divergence_and_terminal_stock(self):
         result = analyze_replay(TRACE)
         self.assertEqual(result['first_action_divergence'], {'step': 624, 'day': 26, 'hour': 0})

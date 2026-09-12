@@ -64,7 +64,8 @@ Les tests d’archive compilent les sources, vérifient leurs empreintes et le
 chargement des cinq fichiers autonomes. La suite inclut désormais les tests du
 banc et de la correction CARE avec le moteur officiel. Elle ne remplace pas
 les campagnes de performance.
-Le développement et les derniers contrôles détaillés ont utilisé Python 3.14.
+Le développement historique a utilisé Python 3.14. Le checkpoint reproductible
+du diagnostic local a utilisé Python 3.12.14.
 L’équivalence numérique entre toutes les versions de Python n’est pas certifiée.
 
 La série reste en développement. Les notes anciennes peuvent décrire des

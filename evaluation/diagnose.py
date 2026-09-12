@@ -143,6 +143,11 @@ def analyze_order_swap(path, player, step, slots):
     if player not in (0, 1) or step < 0 or step >= len(steps):
         raise ValueError('Invalid player or step')
     left, right = slots
+    target_record = steps[step]
+    recorded_market = target_record['actions'][player]['market']
+    if any(type(slot) is not int or not 0 <= slot < len(recorded_market)
+           for slot in (left, right)):
+        raise ValueError('Swap slot outside recorded market orders')
     engine = load_engine()
     identity, _, _ = _records(path)
     state, env = new_game(identity['resolved_seed'])
@@ -159,18 +164,15 @@ def analyze_order_swap(path, player, step, slots):
 
     original_state, original_env = copy.deepcopy(state), copy.deepcopy(env)
     swapped_state, swapped_env = copy.deepcopy(state), copy.deepcopy(env)
-    record = steps[step]
     for seat in (0, 1):
         original_state[seat].observation.step = step
         swapped_state[seat].observation.step = step
-        original_state[seat].action = copy.deepcopy(record['actions'][seat])
-        swapped_state[seat].action = copy.deepcopy(record['actions'][seat])
+        original_state[seat].action = copy.deepcopy(target_record['actions'][seat])
+        swapped_state[seat].action = copy.deepcopy(target_record['actions'][seat])
     market = swapped_state[player].action['market']
-    if max(left, right) >= len(market):
-        raise ValueError('Swap slot outside recorded market orders')
     market[left], market[right] = market[right], market[left]
     engine.interpreter(original_state, original_env)
-    if [snapshot(s.observation) for s in original_state] != record['post']:
+    if [snapshot(s.observation) for s in original_state] != target_record['post']:
         raise ValueError(f'original poststate mismatch at step {step}')
     engine.interpreter(swapped_state, swapped_env)
 
@@ -183,7 +185,7 @@ def analyze_order_swap(path, player, step, slots):
         return farms
     return {
         'file': Path(path).name, 'step': step, 'player': player, 'slots': list(slots),
-        'original_market': record['actions'][player]['market'],
+        'original_market': target_record['actions'][player]['market'],
         'swapped_market': swapped_state[player].action['market'],
         'original_money': original_money, 'swapped_money': swapped_money,
         'money_effect': [after - before for after, before in zip(swapped_money, original_money)],
