@@ -1,0 +1,423 @@
+{
+  "diagnostic_only": true,
+  "scope": "One decision cash counterfactual and one engine-step swap, not a full-game improvement",
+  "cases": [
+    {
+      "seed": 950080,
+      "step": 132,
+      "original_cash": 540.0,
+      "counterfactual_cash": 503.0,
+      "original_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": [
+          [],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      },
+      "counterfactual_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": [
+          []
+        ]
+      },
+      "same_unit_actions": true,
+      "first_sale_swap": {
+        "file": "seed-950080-seat-0.jsonl.gz",
+        "step": 120,
+        "player": 0,
+        "slots": [
+          0,
+          1
+        ],
+        "original_market": [
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "swapped_market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "original_money": [
+          1345.0,
+          1308.0
+        ],
+        "swapped_money": [
+          1329.0,
+          1329.0
+        ],
+        "money_effect": [
+          -16.0,
+          21.0
+        ],
+        "relative_margin_effect": -37.0,
+        "same_farms_except_money": true,
+        "same_private_sheds": true,
+        "scope_note": "One official-engine step with recorded actions; this isolates execution timing but is not a full-game policy or performance result."
+      }
+    },
+    {
+      "seed": 950000,
+      "step": 132,
+      "original_cash": 540.0,
+      "counterfactual_cash": 503.0,
+      "original_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": [
+          [],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      },
+      "counterfactual_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": [
+          []
+        ]
+      },
+      "same_unit_actions": true,
+      "first_sale_swap": {
+        "file": "seed-950000-seat-0.jsonl.gz",
+        "step": 120,
+        "player": 0,
+        "slots": [
+          0,
+          1
+        ],
+        "original_market": [
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "swapped_market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "original_money": [
+          1345.0,
+          1308.0
+        ],
+        "swapped_money": [
+          1329.0,
+          1329.0
+        ],
+        "money_effect": [
+          -16.0,
+          21.0
+        ],
+        "relative_margin_effect": -37.0,
+        "same_farms_except_money": true,
+        "same_private_sheds": true,
+        "scope_note": "One official-engine step with recorded actions; this isolates execution timing but is not a full-game policy or performance result."
+      }
+    },
+    {
+      "seed": 950180,
+      "step": 132,
+      "original_cash": 561.0,
+      "counterfactual_cash": 533.0,
+      "original_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": [
+          [],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      },
+      "counterfactual_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": [
+          []
+        ]
+      },
+      "same_unit_actions": true,
+      "first_sale_swap": {
+        "file": "seed-950180-seat-0.jsonl.gz",
+        "step": 120,
+        "player": 0,
+        "slots": [
+          0,
+          1
+        ],
+        "original_market": [
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "swapped_market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "original_money": [
+          1366.0,
+          1338.0
+        ],
+        "swapped_money": [
+          1354.0,
+          1354.0
+        ],
+        "money_effect": [
+          -12.0,
+          16.0
+        ],
+        "relative_margin_effect": -28.0,
+        "same_farms_except_money": true,
+        "same_private_sheds": true,
+        "scope_note": "One official-engine step with recorded actions; this isolates execution timing but is not a full-game policy or performance result."
+      }
+    }
+  ]
+}

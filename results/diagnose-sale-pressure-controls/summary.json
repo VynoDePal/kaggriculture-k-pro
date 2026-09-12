@@ -1,0 +1,47 @@
+{
+  "diagnostic_only": true,
+  "matches": [
+    {
+      "file": "seed-950080.jsonl.gz",
+      "job": {
+        "candidate": "k_pro/k_pro6.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seed": 950080,
+        "seat": 0
+      },
+      "scores": [
+        141097.0,
+        141097.0
+      ],
+      "label": "parent-self diagnostic, not campaign B"
+    },
+    {
+      "file": "seed-950000.jsonl.gz",
+      "job": {
+        "candidate": "k_pro/k_pro6.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seed": 950000,
+        "seat": 0
+      },
+      "scores": [
+        126756.0,
+        126756.0
+      ],
+      "label": "parent-self diagnostic, not campaign B"
+    },
+    {
+      "file": "seed-950180.jsonl.gz",
+      "job": {
+        "candidate": "k_pro/k_pro6.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seed": 950180,
+        "seat": 0
+      },
+      "scores": [
+        93851.0,
+        93851.0
+      ],
+      "label": "parent-self diagnostic, not campaign B"
+    }
+  ]
+}

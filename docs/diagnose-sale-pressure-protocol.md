@@ -1,0 +1,11 @@
+# Diagnostic des défaites du candidat de priorité des ventes
+
+Point de départ : PR3 fusionnée, main49aa95faff0b57132da737292583618638a349f1, arbre a4520652c37f59db4e827f64a953a9a38db9f9c8. Aucun changement de politique, du moteur ou du banc. Aucune nouvelle campagne de performance.
+
+Sélection descriptive à partir de B COMPLETE : les trois graines de plus faible marge moyenne sur les deux sièges contre K Pro6, tri secondaire par graine. Résultat :950080,950000,950180. Rejouer les six matchs avec égalité exacte aux scores archivés, puis trois contrôles K Pro6 contre lui-même sur ces graines. Cette sélection extrême ne représente pas la fréquence des mécanismes dans le panel ni le classement actuel.
+
+Hypothèses avant examen des traces : H1, des permutations défavorables font perdre des recettes dans des ventes simultanées ; H2, des écarts de production ou de situation initiale expliquent principalement les déficits. Les contrôles parent-self testent la composante initiale/de siège ; les transactions réellement exécutées distinguent prix, quantités et dépenses. Un échange isolé d'emplacements au même pré-état peut établir un effet sur ce tour, jamais un gain terminal général. Si aucun tel contre-test ne tranche, conserver UNRESOLVED.
+
+Contrôler pré/post-états du moteur, scores et réconciliation monétaire. Publier les preuves et un rapport distinguant faits, hypothèses et limites. Ne pas ajuster le candidat sur ces cas ; une future modification demandera un design borné et une nouvelle mesure indépendante. Ni merge ni soumission Kaggle.
+
+Après lecture des traces : H2 est précisée par une divergence d'achat au pas132, précédée d'un gain monétaire au pas120. Contre-test fixé avant exécution : deux instances fraîches du même candidat reçoivent exactement son historique ; au pas132 seulement, réduire le cash propre au niveau du rival dans une instance. Prédiction : l'achat de vache disparaît si le seuil de trésorerie est responsable. Un échec de reproduction de l'action originale invalide le test. Ce contre-test ne prolonge pas la partie et ne prouve pas que l'achat anticipé cause toute la défaite. Tester aussi l'échange SELL0/1 au pas120 dans les trois cas pour mesurer l'effet immédiat du premier tri.

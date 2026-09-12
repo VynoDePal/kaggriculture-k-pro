@@ -1,5 +1,7 @@
 # Kaggriculture — Série K Pro
 
+Dernier diagnostic : [défaites après priorité des ventes](docs/reports/2026-09-12-diagnose-sale-pressure.md). Les contre-tests établissent une sensibilité des achats au cash, sans prouver la cause terminale des défaites ni modifier la politique.
+
 Sources Python et documentation technique de la série K Pro.
 
 Ce dépôt indépendant est un instantané du travail au 9 septembre 2026.

@@ -1,0 +1,572 @@
+{
+  "campaign_b_results_sha256": "1047bc05d30b0151924591293f29f7f74d53f70df70f196273c63500f9707dad",
+  "diagnostic_only": true,
+  "matches": [
+    {
+      "file": "seed-950080-seat-0.jsonl.gz",
+      "job": {
+        "candidate": "candidates/k_pro6_sale_pressure.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 0,
+        "seed": 950080
+      },
+      "scores": [
+        114923.0,
+        116935.0
+      ],
+      "summary": {
+        "interpretation": "Money values are observed net pre/post-step changes. Simultaneous engine effects mean they are not evidence that any particular command succeeded.",
+        "players": [
+          {
+            "observed_negative_money_delta": -20235.0,
+            "observed_positive_money_delta": 132158.0,
+            "player": 0,
+            "steps_with_money_change": 233,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 114923.0,
+            "terminal_seeds": {
+              "CARROT": 1,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 1
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          },
+          {
+            "observed_negative_money_delta": -21420.0,
+            "observed_positive_money_delta": 135355.0,
+            "player": 1,
+            "steps_with_money_change": 222,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 116935.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "file": "seed-950080-seat-1.jsonl.gz",
+      "job": {
+        "candidate": "candidates/k_pro6_sale_pressure.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 1,
+        "seed": 950080
+      },
+      "scores": [
+        116935.0,
+        114923.0
+      ],
+      "summary": {
+        "interpretation": "Money values are observed net pre/post-step changes. Simultaneous engine effects mean they are not evidence that any particular command succeeded.",
+        "players": [
+          {
+            "observed_negative_money_delta": -21420.0,
+            "observed_positive_money_delta": 135355.0,
+            "player": 0,
+            "steps_with_money_change": 222,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 116935.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          },
+          {
+            "observed_negative_money_delta": -20235.0,
+            "observed_positive_money_delta": 132158.0,
+            "player": 1,
+            "steps_with_money_change": 233,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 114923.0,
+            "terminal_seeds": {
+              "CARROT": 1,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 1
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "file": "seed-950000-seat-0.jsonl.gz",
+      "job": {
+        "candidate": "candidates/k_pro6_sale_pressure.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 0,
+        "seed": 950000
+      },
+      "scores": [
+        138017.0,
+        139925.0
+      ],
+      "summary": {
+        "interpretation": "Money values are observed net pre/post-step changes. Simultaneous engine effects mean they are not evidence that any particular command succeeded.",
+        "players": [
+          {
+            "observed_negative_money_delta": -16511.0,
+            "observed_positive_money_delta": 151528.0,
+            "player": 0,
+            "steps_with_money_change": 234,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 138017.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          },
+          {
+            "observed_negative_money_delta": -15679.0,
+            "observed_positive_money_delta": 152604.0,
+            "player": 1,
+            "steps_with_money_change": 213,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 139925.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 1
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "file": "seed-950000-seat-1.jsonl.gz",
+      "job": {
+        "candidate": "candidates/k_pro6_sale_pressure.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 1,
+        "seed": 950000
+      },
+      "scores": [
+        139925.0,
+        138017.0
+      ],
+      "summary": {
+        "interpretation": "Money values are observed net pre/post-step changes. Simultaneous engine effects mean they are not evidence that any particular command succeeded.",
+        "players": [
+          {
+            "observed_negative_money_delta": -15679.0,
+            "observed_positive_money_delta": 152604.0,
+            "player": 0,
+            "steps_with_money_change": 213,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 139925.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 1
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          },
+          {
+            "observed_negative_money_delta": -16511.0,
+            "observed_positive_money_delta": 151528.0,
+            "player": 1,
+            "steps_with_money_change": 234,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 138017.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "file": "seed-950180-seat-0.jsonl.gz",
+      "job": {
+        "candidate": "candidates/k_pro6_sale_pressure.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 0,
+        "seed": 950180
+      },
+      "scores": [
+        90418.0,
+        91789.0
+      ],
+      "summary": {
+        "interpretation": "Money values are observed net pre/post-step changes. Simultaneous engine effects mean they are not evidence that any particular command succeeded.",
+        "players": [
+          {
+            "observed_negative_money_delta": -16719.0,
+            "observed_positive_money_delta": 104137.0,
+            "player": 0,
+            "steps_with_money_change": 221,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 90418.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          },
+          {
+            "observed_negative_money_delta": -16046.0,
+            "observed_positive_money_delta": 104835.0,
+            "player": 1,
+            "steps_with_money_change": 222,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 91789.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "file": "seed-950180-seat-1.jsonl.gz",
+      "job": {
+        "candidate": "candidates/k_pro6_sale_pressure.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 1,
+        "seed": 950180
+      },
+      "scores": [
+        91789.0,
+        90418.0
+      ],
+      "summary": {
+        "interpretation": "Money values are observed net pre/post-step changes. Simultaneous engine effects mean they are not evidence that any particular command succeeded.",
+        "players": [
+          {
+            "observed_negative_money_delta": -16046.0,
+            "observed_positive_money_delta": 104835.0,
+            "player": 0,
+            "steps_with_money_change": 222,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 91789.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          },
+          {
+            "observed_negative_money_delta": -16719.0,
+            "observed_positive_money_delta": 104137.0,
+            "player": 1,
+            "steps_with_money_change": 221,
+            "terminal_carried_inventories": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "terminal_money": 90418.0,
+            "terminal_seeds": {
+              "CARROT": 0,
+              "MELON": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0
+            },
+            "terminal_shed": {
+              "CARROT": 0,
+              "COW": 0,
+              "EGG": 0,
+              "FERTILIZER": 0,
+              "GOOSE": 0,
+              "MELON": 0,
+              "MILK": 0,
+              "SHEEP": 0,
+              "STRAWBERRY": 0,
+              "TOMATO": 0,
+              "WHEAT": 0,
+              "WOOL": 0
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
