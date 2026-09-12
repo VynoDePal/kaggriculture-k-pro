@@ -135,6 +135,19 @@ récent; il ne faut pas la réécrire seulement pour actualiser ces empreintes.
 Le [snapshot historique publié](https://github.com/VynoDePal/kaggriculture-k-pro/tree/433ac3049277e91a471876cf4f8be2cc444cb8dc)
 conserve l'arbre générateur des artefacts livrés ici.
 
+## Campagne de priorité des ventes
+
+Le [protocole pré-enregistré](sale-pressure-protocol.md) et le
+[rapport A/B](reports/2026-09-12-sale-pressure.md) décrivent la mesure du candidat
+`candidates/k_pro6_sale_pressure.py`. Les banques publiées sont
+`results/sale-pressure-a/` et `results/sale-pressure-b/`; chacune contient cinq
+paires, 200 graines et les deux sièges. Seuls leurs quatre fichiers de preuve
+(`manifest.json`, `summary.json`, `diagnostics.json`, `matches.jsonl.gz`) sont à
+consommer, et seulement lorsque le manifeste est `COMPLETE`. La décision structurée
+est `results/sale-pressure-decision.json`. Les critères sont satisfaits sur B pour
+le panel K Pro archivé, sans remplacement automatique de K Pro 6 ni affirmation
+sur le ladder actuel.
+
 ## Limites
 
 Le banc appelle l'interpréteur et le sélecteur de callable officiels, avec orchestration locale. Un hook d'audit Python interdit les sockets, requêtes HTTP, appels ctypes et processus externes pendant le chargement et les décisions. Il est destiné aux politiques K Pro autonomes de confiance : ce n'est pas une frontière de sécurité contre du code hostile. Le banc n'émule ni le sandbox ni les limites de temps/overage du framework distant. Il n'établit pas une parité intégrale avec tous les comportements du package `kaggle_environments`. Les temps de décision sous charge locale ne garantissent pas les délais sur Kaggle. Les sources officielles sont conservées exactement ; deux fonctions auxiliaires sont extraites par AST pour éviter les dépendances externes. Le pont moteur ne modifie pas `sys.modules` ; le chargeur restaure son état après les imports de politique.

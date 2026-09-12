@@ -1,0 +1,222 @@
+{
+  "candidates/k_pro6_sale_pressure.py vs k_pro/k_pro6.py": {
+    "seeds": 200,
+    "games": 400,
+    "wins": 378,
+    "losses": 22,
+    "ties": 0,
+    "mean_margin": 4694.2375,
+    "margin_ci95": [
+      4284.653989642152,
+      5103.8210103578485
+    ],
+    "win_rate": 0.945,
+    "win_rate_ci95": [
+      0.9163604523381728,
+      0.9736395476618271
+    ],
+    "seats": {
+      "0": {
+        "wins": 190,
+        "mean_margin": 4665.935,
+        "margin_ci95": [
+          4231.201062437938,
+          5100.668937562063
+        ],
+        "win_rate_ci95": [
+          0.919533847841415,
+          0.9804661521585849
+        ]
+      },
+      "1": {
+        "wins": 188,
+        "mean_margin": 4722.54,
+        "margin_ci95": [
+          4284.744044793138,
+          5160.335955206862
+        ],
+        "win_rate_ci95": [
+          0.9068021197561483,
+          0.9731978802438516
+        ]
+      }
+    },
+    "ci_method": "Student t199 on 200 seed clusters; one opponent per summary"
+  },
+  "candidates/k_pro6_sale_pressure.py vs k_pro/k_pro4_loader_fixed.py": {
+    "seeds": 200,
+    "games": 400,
+    "wins": 374,
+    "losses": 26,
+    "ties": 0,
+    "mean_margin": 4436.145,
+    "margin_ci95": [
+      4038.1081372032127,
+      4834.181862796788
+    ],
+    "win_rate": 0.935,
+    "win_rate_ci95": [
+      0.9035010724163509,
+      0.9664989275836492
+    ],
+    "seats": {
+      "0": {
+        "wins": 185,
+        "mean_margin": 4525.915,
+        "margin_ci95": [
+          4080.3893757032642,
+          4971.440624296735
+        ],
+        "win_rate_ci95": [
+          0.8881809736263524,
+          0.9618190263736477
+        ]
+      },
+      "1": {
+        "wins": 189,
+        "mean_margin": 4346.375,
+        "margin_ci95": [
+          3935.9396816083754,
+          4756.810318391625
+        ],
+        "win_rate_ci95": [
+          0.913131028269022,
+          0.9768689717309779
+        ]
+      }
+    },
+    "ci_method": "Student t199 on 200 seed clusters; one opponent per summary"
+  },
+  "candidates/k_pro6_sale_pressure.py vs k_pro/k_pro2.py": {
+    "seeds": 200,
+    "games": 400,
+    "wins": 380,
+    "losses": 20,
+    "ties": 0,
+    "mean_margin": 4827.98,
+    "margin_ci95": [
+      4408.433072127126,
+      5247.526927872873
+    ],
+    "win_rate": 0.95,
+    "win_rate_ci95": [
+      0.9238480050243714,
+      0.9761519949756285
+    ],
+    "seats": {
+      "0": {
+        "wins": 189,
+        "mean_margin": 4925.275,
+        "margin_ci95": [
+          4463.4845004469125,
+          5387.065499553087
+        ],
+        "win_rate_ci95": [
+          0.913131028269022,
+          0.9768689717309779
+        ]
+      },
+      "1": {
+        "wins": 191,
+        "mean_margin": 4730.685,
+        "margin_ci95": [
+          4294.096704993691,
+          5167.27329500631
+        ],
+        "win_rate_ci95": [
+          0.926021310292464,
+          0.9839786897075359
+        ]
+      }
+    },
+    "ci_method": "Student t199 on 200 seed clusters; one opponent per summary"
+  },
+  "k_pro/k_pro6.py vs k_pro/k_pro4_loader_fixed.py": {
+    "seeds": 200,
+    "games": 400,
+    "wins": 177,
+    "losses": 223,
+    "ties": 0,
+    "mean_margin": -195.8475,
+    "margin_ci95": [
+      -538.703006216208,
+      147.00800621620797
+    ],
+    "win_rate": 0.4425,
+    "win_rate_ci95": [
+      0.3783733108406496,
+      0.5066266891593504
+    ],
+    "seats": {
+      "0": {
+        "wins": 88,
+        "mean_margin": -219.7,
+        "margin_ci95": [
+          -596.288667717391,
+          156.88866771739112
+        ],
+        "win_rate_ci95": [
+          0.3706109161172644,
+          0.5093890838827356
+        ]
+      },
+      "1": {
+        "wins": 89,
+        "mean_margin": -171.995,
+        "margin_ci95": [
+          -523.212431458179,
+          179.22243145817902
+        ],
+        "win_rate_ci95": [
+          0.3755299999780627,
+          0.5144700000219373
+        ]
+      }
+    },
+    "ci_method": "Student t199 on 200 seed clusters; one opponent per summary"
+  },
+  "k_pro/k_pro6.py vs k_pro/k_pro2.py": {
+    "seeds": 200,
+    "games": 400,
+    "wins": 189,
+    "losses": 211,
+    "ties": 0,
+    "mean_margin": 93.02,
+    "margin_ci95": [
+      -293.4858033996653,
+      479.5258033996653
+    ],
+    "win_rate": 0.4725,
+    "win_rate_ci95": [
+      0.4087476872289673,
+      0.5362523127710326
+    ],
+    "seats": {
+      "0": {
+        "wins": 96,
+        "mean_margin": 172.605,
+        "margin_ci95": [
+          -245.52103234963104,
+          590.731032349631
+        ],
+        "win_rate_ci95": [
+          0.41016179114454343,
+          0.5498382088554565
+        ]
+      },
+      "1": {
+        "wins": 93,
+        "mean_margin": 13.435,
+        "margin_ci95": [
+          -378.03079825751286,
+          404.90079825751286
+        ],
+        "win_rate_ci95": [
+          0.3952773043876471,
+          0.534722695612353
+        ]
+      }
+    },
+    "ci_method": "Student t199 on 200 seed clusters; one opponent per summary"
+  }
+}

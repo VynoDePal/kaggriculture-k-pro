@@ -1,0 +1,18 @@
+{
+  "decision": "PROMOTION_CRITERIA_MET",
+  "scope": "local archived K Pro witness panel only",
+  "bank": "results/sale-pressure-b",
+  "primary_pair": "candidates/k_pro6_sale_pressure.py vs k_pro/k_pro6.py",
+  "primary_win_rate": 0.9475,
+  "primary_win_rate_ci95": [0.9209793386525937, 0.9740206613474063],
+  "primary_mean_margin": 4853.995,
+  "primary_margin_ci95": [4416.076045623899, 5291.913954376101],
+  "clear_witness_regression": false,
+  "criteria": {
+    "win_rate_ci95_lower_gt_half": true,
+    "margin_ci95_lower_gt_zero": true,
+    "no_clear_witness_regression": true,
+    "no_mechanical_or_runtime_anomaly": true
+  },
+  "effect": "No incumbent replacement, merge, Kaggle submission, or current-ladder claim."
+}

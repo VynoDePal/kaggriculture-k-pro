@@ -83,3 +83,13 @@ le candidat reste expérimental. Voir le [rapport et la décision](docs/reports/
 Le [diagnostic économique localisé](docs/reports/2026-09-12-diagnose-care.md)
 documente ensuite six replays B et trois contrôles parent-self, sans nouvelle
 conclusion de performance ni modification de K Pro6.
+
+## Expérience : priorité des ventes
+
+Un candidat dérivé de K Pro 6 classe les ventes par recettes menacées dans un
+scénario de rival vendant d'abord la même quantité. Sur la banque de confirmation
+figée, il satisfait les critères pré-enregistrés face au panel K Pro archivé.
+Il reste expérimental : ni K Pro 6 livré, ni soumission Kaggle ne sont remplacés,
+et le résultat ne décrit pas le ladder actuel. Voir le
+[protocole](docs/sale-pressure-protocol.md) et le
+[rapport de mesure](docs/reports/2026-09-12-sale-pressure.md).

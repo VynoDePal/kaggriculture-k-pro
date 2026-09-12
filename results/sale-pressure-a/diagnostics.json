@@ -1,0 +1,185 @@
+{
+  "bank": "results/sale-pressure-a",
+  "matches": 2000,
+  "primary_pair": "candidates/k_pro6_sale_pressure.py vs k_pro/k_pro6.py",
+  "primary": {
+    "seeds": 200,
+    "games": 400,
+    "wins": 378,
+    "losses": 22,
+    "ties": 0,
+    "mean_margin": 4694.2375,
+    "margin_ci95": [
+      4284.653989642152,
+      5103.8210103578485
+    ],
+    "win_rate": 0.945,
+    "win_rate_ci95": [
+      0.9163604523381728,
+      0.9736395476618271
+    ],
+    "seats": {
+      "0": {
+        "wins": 190,
+        "mean_margin": 4665.935,
+        "margin_ci95": [
+          4231.201062437938,
+          5100.668937562063
+        ],
+        "win_rate_ci95": [
+          0.919533847841415,
+          0.9804661521585849
+        ]
+      },
+      "1": {
+        "wins": 188,
+        "mean_margin": 4722.54,
+        "margin_ci95": [
+          4284.744044793138,
+          5160.335955206862
+        ],
+        "win_rate_ci95": [
+          0.9068021197561483,
+          0.9731978802438516
+        ]
+      }
+    },
+    "ci_method": "Student t199 on 200 seed clusters; one opponent per summary"
+  },
+  "matched_witness_deltas": {
+    "k_pro/k_pro2.py": {
+      "margin_delta": 4734.96,
+      "margin_delta_ci95": [
+        4246.2735643217875,
+        5223.646435678213
+      ],
+      "win_rate_delta": 0.4775,
+      "win_rate_delta_ci95": [
+        0.41409344940663056,
+        0.5409065505933695
+      ]
+    },
+    "k_pro/k_pro4_loader_fixed.py": {
+      "margin_delta": 4631.9925,
+      "margin_delta_ci95": [
+        4166.036489046281,
+        5097.94851095372
+      ],
+      "win_rate_delta": 0.4925,
+      "win_rate_delta_ci95": [
+        0.4245632131316315,
+        0.5604367868683685
+      ]
+    }
+  },
+  "clear_witness_regression": false,
+  "bank_b_gate_met": true,
+  "telemetry": {
+    "candidates/k_pro6_sale_pressure.py": {
+      "games": 1200,
+      "late_care_commands": 15673,
+      "commands": {
+        "BUILD_COOP": 2103,
+        "BUILD_PASTURE": 18378,
+        "CARE": 333305,
+        "COLLECT_FERTILIZER": 427626,
+        "DIG": 16178,
+        "DROP": 10468,
+        "EAST": 716294,
+        "FEED": 406064,
+        "FERTILIZE": 149164,
+        "HARVEST": 451838,
+        "NORTH": 1001135,
+        "PASS": 1377869,
+        "PICKUP": 411724,
+        "PLACE": 50777,
+        "PLANT": 180848,
+        "SOUTH": 519005,
+        "WATER": 893178,
+        "WEST": 997108
+      },
+      "max_seconds": 0.11290396200001851,
+      "total_seconds": 798.3439454434874
+    },
+    "k_pro/k_pro6.py": {
+      "games": 1200,
+      "late_care_commands": 15736,
+      "commands": {
+        "BUILD_COOP": 2100,
+        "BUILD_PASTURE": 18375,
+        "CARE": 332769,
+        "COLLECT_FERTILIZER": 426949,
+        "DIG": 16137,
+        "DROP": 10513,
+        "EAST": 716069,
+        "FEED": 406334,
+        "FERTILIZE": 147757,
+        "HARVEST": 450724,
+        "NORTH": 1002278,
+        "PASS": 1385682,
+        "PICKUP": 411704,
+        "PLACE": 50297,
+        "PLANT": 181104,
+        "SOUTH": 515680,
+        "WATER": 891019,
+        "WEST": 1000335
+      },
+      "max_seconds": 0.09735588599960465,
+      "total_seconds": 822.5102371146659
+    },
+    "k_pro/k_pro4_loader_fixed.py": {
+      "games": 800,
+      "late_care_commands": 10633,
+      "commands": {
+        "BUILD_COOP": 1409,
+        "BUILD_PASTURE": 12255,
+        "CARE": 222914,
+        "COLLECT_FERTILIZER": 285324,
+        "DIG": 10866,
+        "DROP": 7062,
+        "EAST": 477784,
+        "FEED": 271991,
+        "FERTILIZE": 99054,
+        "HARVEST": 301114,
+        "NORTH": 669178,
+        "PASS": 918654,
+        "PICKUP": 274093,
+        "PLACE": 33413,
+        "PLANT": 120862,
+        "SOUTH": 345805,
+        "WATER": 596183,
+        "WEST": 661322
+      },
+      "max_seconds": 0.26089411599969026,
+      "total_seconds": 424.89081158380304
+    },
+    "k_pro/k_pro2.py": {
+      "games": 800,
+      "late_care_commands": 10777,
+      "commands": {
+        "BUILD_COOP": 1443,
+        "BUILD_PASTURE": 12317,
+        "CARE": 227682,
+        "COLLECT_FERTILIZER": 287730,
+        "DIG": 11544,
+        "DROP": 6888,
+        "EAST": 448298,
+        "FEED": 274796,
+        "FERTILIZE": 96601,
+        "HARVEST": 298915,
+        "NORTH": 656609,
+        "PASS": 998565,
+        "PICKUP": 274289,
+        "PLACE": 29878,
+        "PLANT": 121506,
+        "SOUTH": 332372,
+        "WATER": 588507,
+        "WEST": 637657
+      },
+      "max_seconds": 0.08832433499992476,
+      "total_seconds": 411.5164834997104
+    }
+  },
+  "method": "Differences: candidate minus KPro6 against the same witness; average both seats per seed; Student t199 over200 seeds. Win deltas are proportions, not percentage points.",
+  "limitation": "Command counts are issued actions, not economic loss attribution; witness trajectories can diverge under the same seed."
+}
