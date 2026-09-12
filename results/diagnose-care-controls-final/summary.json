@@ -1,0 +1,51 @@
+{
+  "controls": [
+    {
+      "file": "seed-930053-parent-self.jsonl.gz",
+      "job": {
+        "candidate": "k_pro/k_pro6.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 0,
+        "seed": 930053
+      },
+      "label": "parent-self initial-seat/asymmetry diagnostic control; not campaign B",
+      "scores": [
+        103543.0,
+        103543.0
+      ],
+      "seat_0_minus_seat_1": 0.0
+    },
+    {
+      "file": "seed-930132-parent-self.jsonl.gz",
+      "job": {
+        "candidate": "k_pro/k_pro6.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 0,
+        "seed": 930132
+      },
+      "label": "parent-self initial-seat/asymmetry diagnostic control; not campaign B",
+      "scores": [
+        85832.0,
+        83483.0
+      ],
+      "seat_0_minus_seat_1": 2349.0
+    },
+    {
+      "file": "seed-930051-parent-self.jsonl.gz",
+      "job": {
+        "candidate": "k_pro/k_pro6.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 0,
+        "seed": 930051
+      },
+      "label": "parent-self initial-seat/asymmetry diagnostic control; not campaign B",
+      "scores": [
+        104299.0,
+        103833.0
+      ],
+      "seat_0_minus_seat_1": 466.0
+    }
+  ],
+  "diagnostic_only": true,
+  "not_campaign_b": true
+}

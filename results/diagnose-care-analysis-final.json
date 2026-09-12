@@ -1,0 +1,4078 @@
+{
+  "diagnostic_only": true,
+  "isolated_order_swap": {
+    "file": "seed-930053-seat-0.jsonl.gz",
+    "money_effect": [
+      738.0,
+      -697.0
+    ],
+    "original_market": [
+      [
+        "SELL",
+        "WOOL",
+        12
+      ],
+      [
+        "SELL",
+        "TOMATO",
+        4
+      ],
+      [
+        "SELL",
+        "STRAWBERRY",
+        29
+      ],
+      [
+        "SELL",
+        "MILK",
+        5
+      ],
+      [
+        "SELL",
+        "EGG",
+        4
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        9
+      ],
+      [
+        "SELL",
+        "CARROT",
+        3
+      ],
+      [
+        "SELL",
+        "FERTILIZER",
+        5
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "HIRE"
+      ]
+    ],
+    "original_money": [
+      92289.0,
+      93766.0
+    ],
+    "player": 0,
+    "relative_margin_effect": 1435.0,
+    "same_farms_except_money": true,
+    "same_private_sheds": true,
+    "scope_note": "One official-engine step with recorded actions; this isolates execution timing but is not a full-game policy or performance result.",
+    "slots": [
+      1,
+      2
+    ],
+    "step": 672,
+    "swapped_market": [
+      [
+        "SELL",
+        "WOOL",
+        12
+      ],
+      [
+        "SELL",
+        "STRAWBERRY",
+        29
+      ],
+      [
+        "SELL",
+        "TOMATO",
+        4
+      ],
+      [
+        "SELL",
+        "MILK",
+        5
+      ],
+      [
+        "SELL",
+        "EGG",
+        4
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        9
+      ],
+      [
+        "SELL",
+        "CARROT",
+        3
+      ],
+      [
+        "SELL",
+        "FERTILIZER",
+        5
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "HIRE"
+      ]
+    ],
+    "swapped_money": [
+      93027.0,
+      93069.0
+    ]
+  },
+  "matches": [
+    {
+      "accounting_note": "Money records successful official-engine commits only; positive sales and negative purchases/hire/land are realized flows.",
+      "cash_reconciliation": [
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 0,
+          "realized_net_commits": 100529.0,
+          "terminal_money": 103529.0
+        },
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 1,
+          "realized_net_commits": 102046.0,
+          "terminal_money": 105046.0
+        }
+      ],
+      "file": "seed-930051-seat-0.jsonl.gz",
+      "first_action_divergence": {
+        "day": 3,
+        "hour": 15,
+        "step": 87
+      },
+      "job": {
+        "candidate": "candidates/k_pro6_care_fp.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 0,
+        "seed": 930051
+      },
+      "localized_transactions": [
+        {
+          "first_unit_price": 228,
+          "item": "WOOL",
+          "last_unit_price": 227,
+          "money": 682,
+          "operation": "SELL",
+          "player": 1,
+          "step": 365,
+          "units": 3
+        },
+        {
+          "first_unit_price": 227,
+          "item": "WOOL",
+          "last_unit_price": 226,
+          "money": 679,
+          "operation": "SELL",
+          "player": 0,
+          "step": 366,
+          "units": 3
+        },
+        {
+          "first_unit_price": 205,
+          "item": "MILK",
+          "last_unit_price": 203,
+          "money": 612,
+          "operation": "SELL",
+          "player": 1,
+          "step": 388,
+          "units": 3
+        },
+        {
+          "first_unit_price": 204,
+          "item": "MILK",
+          "last_unit_price": 203,
+          "money": 610,
+          "operation": "SELL",
+          "player": 0,
+          "step": 390,
+          "units": 3
+        },
+        {
+          "first_unit_price": 190,
+          "item": "STRAWBERRY",
+          "last_unit_price": 164,
+          "money": 3910,
+          "operation": "SELL",
+          "player": 0,
+          "step": 408,
+          "units": 22
+        },
+        {
+          "first_unit_price": 190,
+          "item": "STRAWBERRY",
+          "last_unit_price": 159,
+          "money": 4552,
+          "operation": "SELL",
+          "player": 1,
+          "step": 408,
+          "units": 26
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 230,
+          "money": 1386,
+          "operation": "SELL",
+          "player": 1,
+          "step": 431,
+          "units": 6
+        },
+        {
+          "first_unit_price": 210,
+          "item": "MILK",
+          "last_unit_price": 196,
+          "money": 1829,
+          "operation": "SELL",
+          "player": 0,
+          "step": 432,
+          "units": 9
+        },
+        {
+          "first_unit_price": 230,
+          "item": "WOOL",
+          "last_unit_price": 217,
+          "money": 3814,
+          "operation": "SELL",
+          "player": 0,
+          "step": 432,
+          "units": 17
+        },
+        {
+          "first_unit_price": 210,
+          "item": "MILK",
+          "last_unit_price": 191,
+          "money": 2407,
+          "operation": "SELL",
+          "player": 1,
+          "step": 432,
+          "units": 12
+        },
+        {
+          "first_unit_price": 230,
+          "item": "WOOL",
+          "last_unit_price": 223,
+          "money": 2498,
+          "operation": "SELL",
+          "player": 1,
+          "step": 432,
+          "units": 11
+        },
+        {
+          "first_unit_price": 219,
+          "item": "WOOL",
+          "last_unit_price": 215,
+          "money": 869,
+          "operation": "SELL",
+          "player": 0,
+          "step": 508,
+          "units": 4
+        },
+        {
+          "first_unit_price": 219,
+          "item": "WOOL",
+          "last_unit_price": 215,
+          "money": 869,
+          "operation": "SELL",
+          "player": 1,
+          "step": 509,
+          "units": 4
+        },
+        {
+          "first_unit_price": 226,
+          "item": "WOOL",
+          "last_unit_price": 185,
+          "money": 4140,
+          "operation": "SELL",
+          "player": 0,
+          "step": 528,
+          "units": 20
+        },
+        {
+          "first_unit_price": 226,
+          "item": "WOOL",
+          "last_unit_price": 192,
+          "money": 3579,
+          "operation": "SELL",
+          "player": 1,
+          "step": 528,
+          "units": 17
+        },
+        {
+          "first_unit_price": 51,
+          "item": "STRAWBERRY",
+          "last_unit_price": 7,
+          "money": 691,
+          "operation": "SELL",
+          "player": 0,
+          "step": 552,
+          "units": 24
+        },
+        {
+          "first_unit_price": 131,
+          "item": "MELON",
+          "last_unit_price": 120,
+          "money": 754,
+          "operation": "SELL",
+          "player": 1,
+          "step": 552,
+          "units": 6
+        },
+        {
+          "first_unit_price": 5,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 44,
+          "operation": "SELL",
+          "player": 1,
+          "step": 552,
+          "units": 38
+        },
+        {
+          "first_unit_price": 120,
+          "item": "MELON",
+          "last_unit_price": 108,
+          "money": 685,
+          "operation": "SELL",
+          "player": 0,
+          "step": 576,
+          "units": 6
+        },
+        {
+          "first_unit_price": 218,
+          "item": "WOOL",
+          "last_unit_price": 215,
+          "money": 650,
+          "operation": "SELL",
+          "player": 1,
+          "step": 579,
+          "units": 3
+        },
+        {
+          "first_unit_price": 214,
+          "item": "WOOL",
+          "last_unit_price": 206,
+          "money": 841,
+          "operation": "SELL",
+          "player": 0,
+          "step": 580,
+          "units": 4
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 48,
+          "money": -613,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 625,
+          "units": 13
+        },
+        {
+          "first_unit_price": 220,
+          "item": "WOOL",
+          "last_unit_price": 217,
+          "money": 874,
+          "operation": "SELL",
+          "player": 0,
+          "step": 652,
+          "units": 4
+        },
+        {
+          "first_unit_price": 220,
+          "item": "WOOL",
+          "last_unit_price": 217,
+          "money": 874,
+          "operation": "SELL",
+          "player": 1,
+          "step": 653,
+          "units": 4
+        },
+        {
+          "first_unit_price": 225,
+          "item": "WOOL",
+          "last_unit_price": 224,
+          "money": 673,
+          "operation": "SELL",
+          "player": 1,
+          "step": 667,
+          "units": 3
+        },
+        {
+          "first_unit_price": 225,
+          "item": "WOOL",
+          "last_unit_price": 187,
+          "money": 3919,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 19
+        },
+        {
+          "first_unit_price": 225,
+          "item": "WOOL",
+          "last_unit_price": 194,
+          "money": 3161,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 15
+        },
+        {
+          "first_unit_price": 215,
+          "item": "WOOL",
+          "last_unit_price": 209,
+          "money": 850,
+          "operation": "SELL",
+          "player": 1,
+          "step": 691,
+          "units": 4
+        },
+        {
+          "first_unit_price": 1,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 35,
+          "operation": "SELL",
+          "player": 0,
+          "step": 696,
+          "units": 35
+        },
+        {
+          "first_unit_price": 215,
+          "item": "WOOL",
+          "last_unit_price": 209,
+          "money": 850,
+          "operation": "SELL",
+          "player": 0,
+          "step": 696,
+          "units": 4
+        },
+        {
+          "first_unit_price": 59,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 924,
+          "operation": "SELL",
+          "player": 1,
+          "step": 696,
+          "units": 31
+        }
+      ],
+      "scores": [
+        103529.0,
+        105046.0
+      ],
+      "terminal_stock": [
+        {
+          "carried_goods": 0,
+          "seeds": 1,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        },
+        {
+          "carried_goods": 0,
+          "seeds": 0,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        }
+      ],
+      "trace_sha256": "a36d3633b87afae5138ae4d170449a439377d51c1eb4e4edebbeeb89643c2c73",
+      "transaction_totals": [
+        {
+          "item": "COW",
+          "money": -3200,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 8
+        },
+        {
+          "item": "SHEEP",
+          "money": -5500,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 11
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -7936,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "units": 206
+        },
+        {
+          "item": "CARROT",
+          "money": -500,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 25
+        },
+        {
+          "item": "MELON",
+          "money": -960,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 12
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 38
+        },
+        {
+          "item": "WHEAT",
+          "money": -750,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 75
+        },
+        {
+          "item": null,
+          "money": -3348.0,
+          "operation": "HIRE",
+          "player": 0,
+          "units": 264
+        },
+        {
+          "item": "CARROT",
+          "money": 3724,
+          "operation": "SELL",
+          "player": 0,
+          "units": 72
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12603,
+          "operation": "SELL",
+          "player": 0,
+          "units": 258
+        },
+        {
+          "item": "MELON",
+          "money": 14793,
+          "operation": "SELL",
+          "player": 0,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 25611,
+          "operation": "SELL",
+          "player": 0,
+          "units": 207
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 12921,
+          "operation": "SELL",
+          "player": 0,
+          "units": 263
+        },
+        {
+          "item": "WHEAT",
+          "money": 6635,
+          "operation": "SELL",
+          "player": 0,
+          "units": 160
+        },
+        {
+          "item": "WOOL",
+          "money": 53236,
+          "operation": "SELL",
+          "player": 0,
+          "units": 251
+        },
+        {
+          "item": "COW",
+          "money": -3200,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 8
+        },
+        {
+          "item": "SHEEP",
+          "money": -5500,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 11
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -7362,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "units": 193
+        },
+        {
+          "item": "CARROT",
+          "money": -600,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 30
+        },
+        {
+          "item": "MELON",
+          "money": -960,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 12
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 38
+        },
+        {
+          "item": "WHEAT",
+          "money": -760,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 76
+        },
+        {
+          "item": null,
+          "money": -3348.0,
+          "operation": "HIRE",
+          "player": 1,
+          "units": 264
+        },
+        {
+          "item": "CARROT",
+          "money": 4405,
+          "operation": "SELL",
+          "player": 1,
+          "units": 85
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12499,
+          "operation": "SELL",
+          "player": 1,
+          "units": 253
+        },
+        {
+          "item": "MELON",
+          "money": 14862,
+          "operation": "SELL",
+          "player": 1,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 26907,
+          "operation": "SELL",
+          "player": 1,
+          "units": 213
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 14016,
+          "operation": "SELL",
+          "player": 1,
+          "units": 264
+        },
+        {
+          "item": "WHEAT",
+          "money": 5808,
+          "operation": "SELL",
+          "player": 1,
+          "units": 142
+        },
+        {
+          "item": "WOOL",
+          "money": 52079,
+          "operation": "SELL",
+          "player": 1,
+          "units": 244
+        }
+      ],
+      "verified_poststates": 1438
+    },
+    {
+      "accounting_note": "Money records successful official-engine commits only; positive sales and negative purchases/hire/land are realized flows.",
+      "cash_reconciliation": [
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 0,
+          "realized_net_commits": 101339.0,
+          "terminal_money": 104339.0
+        },
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 1,
+          "realized_net_commits": 100802.0,
+          "terminal_money": 103802.0
+        }
+      ],
+      "file": "seed-930051-seat-1.jsonl.gz",
+      "first_action_divergence": {
+        "day": 3,
+        "hour": 15,
+        "step": 87
+      },
+      "job": {
+        "candidate": "candidates/k_pro6_care_fp.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 1,
+        "seed": 930051
+      },
+      "localized_transactions": [
+        {
+          "first_unit_price": 228,
+          "item": "WOOL",
+          "last_unit_price": 227,
+          "money": 682,
+          "operation": "SELL",
+          "player": 1,
+          "step": 365,
+          "units": 3
+        },
+        {
+          "first_unit_price": 227,
+          "item": "WOOL",
+          "last_unit_price": 226,
+          "money": 679,
+          "operation": "SELL",
+          "player": 0,
+          "step": 366,
+          "units": 3
+        },
+        {
+          "first_unit_price": 205,
+          "item": "MILK",
+          "last_unit_price": 203,
+          "money": 612,
+          "operation": "SELL",
+          "player": 1,
+          "step": 388,
+          "units": 3
+        },
+        {
+          "first_unit_price": 204,
+          "item": "MILK",
+          "last_unit_price": 203,
+          "money": 610,
+          "operation": "SELL",
+          "player": 0,
+          "step": 390,
+          "units": 3
+        },
+        {
+          "first_unit_price": 190,
+          "item": "STRAWBERRY",
+          "last_unit_price": 164,
+          "money": 3910,
+          "operation": "SELL",
+          "player": 0,
+          "step": 408,
+          "units": 22
+        },
+        {
+          "first_unit_price": 190,
+          "item": "STRAWBERRY",
+          "last_unit_price": 159,
+          "money": 4552,
+          "operation": "SELL",
+          "player": 1,
+          "step": 408,
+          "units": 26
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 230,
+          "money": 1386,
+          "operation": "SELL",
+          "player": 1,
+          "step": 431,
+          "units": 6
+        },
+        {
+          "first_unit_price": 210,
+          "item": "MILK",
+          "last_unit_price": 196,
+          "money": 1829,
+          "operation": "SELL",
+          "player": 0,
+          "step": 432,
+          "units": 9
+        },
+        {
+          "first_unit_price": 230,
+          "item": "WOOL",
+          "last_unit_price": 217,
+          "money": 3814,
+          "operation": "SELL",
+          "player": 0,
+          "step": 432,
+          "units": 17
+        },
+        {
+          "first_unit_price": 210,
+          "item": "MILK",
+          "last_unit_price": 191,
+          "money": 2407,
+          "operation": "SELL",
+          "player": 1,
+          "step": 432,
+          "units": 12
+        },
+        {
+          "first_unit_price": 230,
+          "item": "WOOL",
+          "last_unit_price": 223,
+          "money": 2498,
+          "operation": "SELL",
+          "player": 1,
+          "step": 432,
+          "units": 11
+        },
+        {
+          "first_unit_price": 219,
+          "item": "WOOL",
+          "last_unit_price": 215,
+          "money": 869,
+          "operation": "SELL",
+          "player": 0,
+          "step": 508,
+          "units": 4
+        },
+        {
+          "first_unit_price": 219,
+          "item": "WOOL",
+          "last_unit_price": 215,
+          "money": 869,
+          "operation": "SELL",
+          "player": 1,
+          "step": 509,
+          "units": 4
+        },
+        {
+          "first_unit_price": 226,
+          "item": "WOOL",
+          "last_unit_price": 185,
+          "money": 4140,
+          "operation": "SELL",
+          "player": 0,
+          "step": 528,
+          "units": 20
+        },
+        {
+          "first_unit_price": 226,
+          "item": "WOOL",
+          "last_unit_price": 192,
+          "money": 3579,
+          "operation": "SELL",
+          "player": 1,
+          "step": 528,
+          "units": 17
+        },
+        {
+          "first_unit_price": 51,
+          "item": "STRAWBERRY",
+          "last_unit_price": 7,
+          "money": 691,
+          "operation": "SELL",
+          "player": 0,
+          "step": 552,
+          "units": 24
+        },
+        {
+          "first_unit_price": 131,
+          "item": "MELON",
+          "last_unit_price": 120,
+          "money": 754,
+          "operation": "SELL",
+          "player": 1,
+          "step": 552,
+          "units": 6
+        },
+        {
+          "first_unit_price": 5,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 44,
+          "operation": "SELL",
+          "player": 1,
+          "step": 552,
+          "units": 38
+        },
+        {
+          "first_unit_price": 45,
+          "item": "WHEAT",
+          "last_unit_price": 45,
+          "money": -540,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "step": 553,
+          "units": 12
+        },
+        {
+          "first_unit_price": 120,
+          "item": "MELON",
+          "last_unit_price": 108,
+          "money": 685,
+          "operation": "SELL",
+          "player": 0,
+          "step": 576,
+          "units": 6
+        },
+        {
+          "first_unit_price": 218,
+          "item": "WOOL",
+          "last_unit_price": 215,
+          "money": 650,
+          "operation": "SELL",
+          "player": 1,
+          "step": 579,
+          "units": 3
+        },
+        {
+          "first_unit_price": 214,
+          "item": "WOOL",
+          "last_unit_price": 206,
+          "money": 841,
+          "operation": "SELL",
+          "player": 0,
+          "step": 580,
+          "units": 4
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 48,
+          "money": -613,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 625,
+          "units": 13
+        },
+        {
+          "first_unit_price": 220,
+          "item": "WOOL",
+          "last_unit_price": 217,
+          "money": 874,
+          "operation": "SELL",
+          "player": 0,
+          "step": 652,
+          "units": 4
+        },
+        {
+          "first_unit_price": 220,
+          "item": "WOOL",
+          "last_unit_price": 217,
+          "money": 874,
+          "operation": "SELL",
+          "player": 1,
+          "step": 653,
+          "units": 4
+        },
+        {
+          "first_unit_price": 215,
+          "item": "WOOL",
+          "last_unit_price": 209,
+          "money": 850,
+          "operation": "SELL",
+          "player": 0,
+          "step": 691,
+          "units": 4
+        },
+        {
+          "first_unit_price": 43,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 518,
+          "operation": "SELL",
+          "player": 0,
+          "step": 696,
+          "units": 33
+        },
+        {
+          "first_unit_price": 48,
+          "item": "WHEAT",
+          "last_unit_price": 48,
+          "money": 720,
+          "operation": "SELL",
+          "player": 0,
+          "step": 696,
+          "units": 15
+        },
+        {
+          "first_unit_price": 1,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 33,
+          "operation": "SELL",
+          "player": 1,
+          "step": 696,
+          "units": 33
+        },
+        {
+          "first_unit_price": 48,
+          "item": "WHEAT",
+          "last_unit_price": 48,
+          "money": 240,
+          "operation": "SELL",
+          "player": 1,
+          "step": 696,
+          "units": 5
+        },
+        {
+          "first_unit_price": 215,
+          "item": "WOOL",
+          "last_unit_price": 209,
+          "money": 850,
+          "operation": "SELL",
+          "player": 1,
+          "step": 696,
+          "units": 4
+        }
+      ],
+      "scores": [
+        104339.0,
+        103802.0
+      ],
+      "terminal_stock": [
+        {
+          "carried_goods": 0,
+          "seeds": 0,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        },
+        {
+          "carried_goods": 0,
+          "seeds": 0,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        }
+      ],
+      "trace_sha256": "091a1f8f3fe067b3545145052dde0756d704d5a335bfad99d66890915f7d81f2",
+      "transaction_totals": [
+        {
+          "item": "COW",
+          "money": -3200,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 8
+        },
+        {
+          "item": "SHEEP",
+          "money": -5500,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 11
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -7936,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "units": 206
+        },
+        {
+          "item": "CARROT",
+          "money": -520,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 26
+        },
+        {
+          "item": "MELON",
+          "money": -960,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 12
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 38
+        },
+        {
+          "item": "WHEAT",
+          "money": -750,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 75
+        },
+        {
+          "item": null,
+          "money": -3348.0,
+          "operation": "HIRE",
+          "player": 0,
+          "units": 264
+        },
+        {
+          "item": "CARROT",
+          "money": 3783,
+          "operation": "SELL",
+          "player": 0,
+          "units": 73
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12631,
+          "operation": "SELL",
+          "player": 0,
+          "units": 261
+        },
+        {
+          "item": "MELON",
+          "money": 14793,
+          "operation": "SELL",
+          "player": 0,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 25782,
+          "operation": "SELL",
+          "player": 0,
+          "units": 208
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 13387,
+          "operation": "SELL",
+          "player": 0,
+          "units": 259
+        },
+        {
+          "item": "WHEAT",
+          "money": 6683,
+          "operation": "SELL",
+          "player": 0,
+          "units": 161
+        },
+        {
+          "item": "WOOL",
+          "money": 53294,
+          "operation": "SELL",
+          "player": 0,
+          "units": 251
+        },
+        {
+          "item": "COW",
+          "money": -3200,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 8
+        },
+        {
+          "item": "SHEEP",
+          "money": -5500,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 11
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -7410,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "units": 194
+        },
+        {
+          "item": "CARROT",
+          "money": -540,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 27
+        },
+        {
+          "item": "MELON",
+          "money": -960,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 12
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 38
+        },
+        {
+          "item": "WHEAT",
+          "money": -770,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 77
+        },
+        {
+          "item": null,
+          "money": -3293.0,
+          "operation": "HIRE",
+          "player": 1,
+          "units": 263
+        },
+        {
+          "item": "CARROT",
+          "money": 4062,
+          "operation": "SELL",
+          "player": 1,
+          "units": 78
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12476,
+          "operation": "SELL",
+          "player": 1,
+          "units": 255
+        },
+        {
+          "item": "MELON",
+          "money": 14862,
+          "operation": "SELL",
+          "player": 1,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 26737,
+          "operation": "SELL",
+          "player": 1,
+          "units": 213
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 13033,
+          "operation": "SELL",
+          "player": 1,
+          "units": 264
+        },
+        {
+          "item": "WHEAT",
+          "money": 5856,
+          "operation": "SELL",
+          "player": 1,
+          "units": 143
+        },
+        {
+          "item": "WOOL",
+          "money": 52249,
+          "operation": "SELL",
+          "player": 1,
+          "units": 245
+        }
+      ],
+      "verified_poststates": 1438
+    },
+    {
+      "accounting_note": "Money records successful official-engine commits only; positive sales and negative purchases/hire/land are realized flows.",
+      "cash_reconciliation": [
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 0,
+          "realized_net_commits": 99683.0,
+          "terminal_money": 102683.0
+        },
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 1,
+          "realized_net_commits": 101275.0,
+          "terminal_money": 104275.0
+        }
+      ],
+      "file": "seed-930053-seat-0.jsonl.gz",
+      "first_action_divergence": {
+        "day": 26,
+        "hour": 0,
+        "step": 624
+      },
+      "job": {
+        "candidate": "candidates/k_pro6_care_fp.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 0,
+        "seed": 930053
+      },
+      "localized_transactions": [
+        {
+          "first_unit_price": 28,
+          "item": "FERTILIZER",
+          "last_unit_price": 27,
+          "money": 55,
+          "operation": "SELL",
+          "player": 0,
+          "step": 629,
+          "units": 2
+        },
+        {
+          "first_unit_price": 28,
+          "item": "FERTILIZER",
+          "last_unit_price": 28,
+          "money": 28,
+          "operation": "SELL",
+          "player": 1,
+          "step": 629,
+          "units": 1
+        },
+        {
+          "first_unit_price": 27,
+          "item": "FERTILIZER",
+          "last_unit_price": 27,
+          "money": 27,
+          "operation": "SELL",
+          "player": 1,
+          "step": 630,
+          "units": 1
+        },
+        {
+          "first_unit_price": 27,
+          "item": "FERTILIZER",
+          "last_unit_price": 26,
+          "money": 79,
+          "operation": "SELL",
+          "player": 0,
+          "step": 631,
+          "units": 3
+        },
+        {
+          "first_unit_price": 27,
+          "item": "FERTILIZER",
+          "last_unit_price": 27,
+          "money": 27,
+          "operation": "SELL",
+          "player": 1,
+          "step": 631,
+          "units": 1
+        },
+        {
+          "first_unit_price": 26,
+          "item": "FERTILIZER",
+          "last_unit_price": 26,
+          "money": 26,
+          "operation": "SELL",
+          "player": 0,
+          "step": 632,
+          "units": 1
+        },
+        {
+          "first_unit_price": 26,
+          "item": "FERTILIZER",
+          "last_unit_price": 26,
+          "money": 52,
+          "operation": "SELL",
+          "player": 1,
+          "step": 632,
+          "units": 2
+        },
+        {
+          "first_unit_price": 25,
+          "item": "FERTILIZER",
+          "last_unit_price": 25,
+          "money": 50,
+          "operation": "SELL",
+          "player": 1,
+          "step": 633,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 47,
+          "operation": "SELL",
+          "player": 0,
+          "step": 646,
+          "units": 1
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -282,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "step": 649,
+          "units": 6
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -235,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 649,
+          "units": 5
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 94,
+          "operation": "SELL",
+          "player": 1,
+          "step": 664,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 94,
+          "operation": "SELL",
+          "player": 0,
+          "step": 667,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 94,
+          "operation": "SELL",
+          "player": 1,
+          "step": 668,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 94,
+          "operation": "SELL",
+          "player": 0,
+          "step": 670,
+          "units": 2
+        },
+        {
+          "first_unit_price": 95,
+          "item": "TOMATO",
+          "last_unit_price": 94,
+          "money": 379,
+          "operation": "SELL",
+          "player": 1,
+          "step": 671,
+          "units": 4
+        },
+        {
+          "first_unit_price": 61,
+          "item": "MILK",
+          "last_unit_price": 53,
+          "money": 285,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 5
+        },
+        {
+          "first_unit_price": 24,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 178,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 29
+        },
+        {
+          "first_unit_price": 94,
+          "item": "TOMATO",
+          "last_unit_price": 92,
+          "money": 372,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 4
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 423,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 9
+        },
+        {
+          "first_unit_price": 72,
+          "item": "MILK",
+          "last_unit_price": 63,
+          "money": 339,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 5
+        },
+        {
+          "first_unit_price": 82,
+          "item": "STRAWBERRY",
+          "last_unit_price": 26,
+          "money": 1614,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 30
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 376,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 8
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -94,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "step": 673,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -141,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 673,
+          "units": 3
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -141,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "step": 674,
+          "units": 3
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -47,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 674,
+          "units": 1
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 235,
+          "operation": "SELL",
+          "player": 0,
+          "step": 675,
+          "units": 5
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 188,
+          "operation": "SELL",
+          "player": 1,
+          "step": 675,
+          "units": 4
+        },
+        {
+          "first_unit_price": 20,
+          "item": "FERTILIZER",
+          "last_unit_price": 19,
+          "money": 39,
+          "operation": "SELL",
+          "player": 1,
+          "step": 680,
+          "units": 2
+        },
+        {
+          "first_unit_price": 243,
+          "item": "WOOL",
+          "last_unit_price": 241,
+          "money": 2662,
+          "operation": "SELL",
+          "player": 0,
+          "step": 696,
+          "units": 11
+        },
+        {
+          "first_unit_price": 243,
+          "item": "WOOL",
+          "last_unit_price": 241,
+          "money": 2903,
+          "operation": "SELL",
+          "player": 1,
+          "step": 696,
+          "units": 12
+        },
+        {
+          "first_unit_price": 42,
+          "item": "CARROT",
+          "last_unit_price": 40,
+          "money": 454,
+          "operation": "SELL",
+          "player": 0,
+          "step": 718,
+          "units": 11
+        },
+        {
+          "first_unit_price": 68,
+          "item": "MILK",
+          "last_unit_price": 47,
+          "money": 343,
+          "operation": "SELL",
+          "player": 0,
+          "step": 718,
+          "units": 6
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 329,
+          "operation": "SELL",
+          "player": 0,
+          "step": 718,
+          "units": 7
+        },
+        {
+          "first_unit_price": 42,
+          "item": "CARROT",
+          "last_unit_price": 40,
+          "money": 494,
+          "operation": "SELL",
+          "player": 1,
+          "step": 718,
+          "units": 12
+        },
+        {
+          "first_unit_price": 68,
+          "item": "MILK",
+          "last_unit_price": 51,
+          "money": 296,
+          "operation": "SELL",
+          "player": 1,
+          "step": 718,
+          "units": 5
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 188,
+          "operation": "SELL",
+          "player": 1,
+          "step": 718,
+          "units": 4
+        }
+      ],
+      "scores": [
+        102683.0,
+        104275.0
+      ],
+      "terminal_stock": [
+        {
+          "carried_goods": 0,
+          "seeds": 0,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        },
+        {
+          "carried_goods": 0,
+          "seeds": 0,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        }
+      ],
+      "trace_sha256": "3739ecc52af12f2ea56a75f39ff518ced0c89bfe97b005105cc76a1b45caf06d",
+      "transaction_totals": [
+        {
+          "item": "COW",
+          "money": -2400,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 6
+        },
+        {
+          "item": "GOOSE",
+          "money": -600,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "SHEEP",
+          "money": -6000,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 12
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -6580,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "units": 174
+        },
+        {
+          "item": "CARROT",
+          "money": -360,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 18
+        },
+        {
+          "item": "MELON",
+          "money": -960,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 12
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 38
+        },
+        {
+          "item": "TOMATO",
+          "money": -100,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -770,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 77
+        },
+        {
+          "item": null,
+          "money": -3238.0,
+          "operation": "HIRE",
+          "player": 0,
+          "units": 261
+        },
+        {
+          "item": "CARROT",
+          "money": 2289,
+          "operation": "SELL",
+          "player": 0,
+          "units": 53
+        },
+        {
+          "item": "EGG",
+          "money": 3594,
+          "operation": "SELL",
+          "player": 0,
+          "units": 65
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12350,
+          "operation": "SELL",
+          "player": 0,
+          "units": 220
+        },
+        {
+          "item": "MELON",
+          "money": 14795,
+          "operation": "SELL",
+          "player": 0,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 6775,
+          "operation": "SELL",
+          "player": 0,
+          "units": 111
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 27900,
+          "operation": "SELL",
+          "player": 0,
+          "units": 264
+        },
+        {
+          "item": "TOMATO",
+          "money": 1156,
+          "operation": "SELL",
+          "player": 0,
+          "units": 12
+        },
+        {
+          "item": "WHEAT",
+          "money": 7513,
+          "operation": "SELL",
+          "player": 0,
+          "units": 182
+        },
+        {
+          "item": "WOOL",
+          "money": 51119,
+          "operation": "SELL",
+          "player": 0,
+          "units": 237
+        },
+        {
+          "item": "COW",
+          "money": -2400,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 6
+        },
+        {
+          "item": "GOOSE",
+          "money": -600,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "SHEEP",
+          "money": -6000,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 12
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -6486,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "units": 172
+        },
+        {
+          "item": "CARROT",
+          "money": -360,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 18
+        },
+        {
+          "item": "MELON",
+          "money": -960,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 12
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 38
+        },
+        {
+          "item": "TOMATO",
+          "money": -100,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -770,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 77
+        },
+        {
+          "item": null,
+          "money": -3238.0,
+          "operation": "HIRE",
+          "player": 1,
+          "units": 261
+        },
+        {
+          "item": "CARROT",
+          "money": 2329,
+          "operation": "SELL",
+          "player": 1,
+          "units": 54
+        },
+        {
+          "item": "EGG",
+          "money": 3594,
+          "operation": "SELL",
+          "player": 1,
+          "units": 65
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12399,
+          "operation": "SELL",
+          "player": 1,
+          "units": 222
+        },
+        {
+          "item": "MELON",
+          "money": 14795,
+          "operation": "SELL",
+          "player": 1,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 6782,
+          "operation": "SELL",
+          "player": 1,
+          "units": 110
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 29336,
+          "operation": "SELL",
+          "player": 1,
+          "units": 265
+        },
+        {
+          "item": "TOMATO",
+          "money": 1163,
+          "operation": "SELL",
+          "player": 1,
+          "units": 12
+        },
+        {
+          "item": "WHEAT",
+          "money": 7231,
+          "operation": "SELL",
+          "player": 1,
+          "units": 176
+        },
+        {
+          "item": "WOOL",
+          "money": 51360,
+          "operation": "SELL",
+          "player": 1,
+          "units": 238
+        }
+      ],
+      "verified_poststates": 1438
+    },
+    {
+      "accounting_note": "Money records successful official-engine commits only; positive sales and negative purchases/hire/land are realized flows.",
+      "cash_reconciliation": [
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 0,
+          "realized_net_commits": 101275.0,
+          "terminal_money": 104275.0
+        },
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 1,
+          "realized_net_commits": 99683.0,
+          "terminal_money": 102683.0
+        }
+      ],
+      "file": "seed-930053-seat-1.jsonl.gz",
+      "first_action_divergence": {
+        "day": 26,
+        "hour": 0,
+        "step": 624
+      },
+      "job": {
+        "candidate": "candidates/k_pro6_care_fp.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 1,
+        "seed": 930053
+      },
+      "localized_transactions": [
+        {
+          "first_unit_price": 28,
+          "item": "FERTILIZER",
+          "last_unit_price": 28,
+          "money": 28,
+          "operation": "SELL",
+          "player": 0,
+          "step": 629,
+          "units": 1
+        },
+        {
+          "first_unit_price": 28,
+          "item": "FERTILIZER",
+          "last_unit_price": 27,
+          "money": 55,
+          "operation": "SELL",
+          "player": 1,
+          "step": 629,
+          "units": 2
+        },
+        {
+          "first_unit_price": 27,
+          "item": "FERTILIZER",
+          "last_unit_price": 27,
+          "money": 27,
+          "operation": "SELL",
+          "player": 0,
+          "step": 630,
+          "units": 1
+        },
+        {
+          "first_unit_price": 27,
+          "item": "FERTILIZER",
+          "last_unit_price": 27,
+          "money": 27,
+          "operation": "SELL",
+          "player": 0,
+          "step": 631,
+          "units": 1
+        },
+        {
+          "first_unit_price": 27,
+          "item": "FERTILIZER",
+          "last_unit_price": 26,
+          "money": 79,
+          "operation": "SELL",
+          "player": 1,
+          "step": 631,
+          "units": 3
+        },
+        {
+          "first_unit_price": 26,
+          "item": "FERTILIZER",
+          "last_unit_price": 26,
+          "money": 52,
+          "operation": "SELL",
+          "player": 0,
+          "step": 632,
+          "units": 2
+        },
+        {
+          "first_unit_price": 26,
+          "item": "FERTILIZER",
+          "last_unit_price": 26,
+          "money": 26,
+          "operation": "SELL",
+          "player": 1,
+          "step": 632,
+          "units": 1
+        },
+        {
+          "first_unit_price": 25,
+          "item": "FERTILIZER",
+          "last_unit_price": 25,
+          "money": 50,
+          "operation": "SELL",
+          "player": 0,
+          "step": 633,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 47,
+          "operation": "SELL",
+          "player": 1,
+          "step": 646,
+          "units": 1
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -235,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "step": 649,
+          "units": 5
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -282,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 649,
+          "units": 6
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 94,
+          "operation": "SELL",
+          "player": 0,
+          "step": 664,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 94,
+          "operation": "SELL",
+          "player": 1,
+          "step": 667,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 94,
+          "operation": "SELL",
+          "player": 0,
+          "step": 668,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 94,
+          "operation": "SELL",
+          "player": 1,
+          "step": 670,
+          "units": 2
+        },
+        {
+          "first_unit_price": 95,
+          "item": "TOMATO",
+          "last_unit_price": 94,
+          "money": 379,
+          "operation": "SELL",
+          "player": 0,
+          "step": 671,
+          "units": 4
+        },
+        {
+          "first_unit_price": 72,
+          "item": "MILK",
+          "last_unit_price": 63,
+          "money": 339,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 5
+        },
+        {
+          "first_unit_price": 82,
+          "item": "STRAWBERRY",
+          "last_unit_price": 26,
+          "money": 1614,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 30
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 376,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 8
+        },
+        {
+          "first_unit_price": 61,
+          "item": "MILK",
+          "last_unit_price": 53,
+          "money": 285,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 5
+        },
+        {
+          "first_unit_price": 24,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 178,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 29
+        },
+        {
+          "first_unit_price": 94,
+          "item": "TOMATO",
+          "last_unit_price": 92,
+          "money": 372,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 4
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 423,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 9
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -141,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "step": 673,
+          "units": 3
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -94,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 673,
+          "units": 2
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -47,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "step": 674,
+          "units": 1
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -141,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 674,
+          "units": 3
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 188,
+          "operation": "SELL",
+          "player": 0,
+          "step": 675,
+          "units": 4
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 235,
+          "operation": "SELL",
+          "player": 1,
+          "step": 675,
+          "units": 5
+        },
+        {
+          "first_unit_price": 20,
+          "item": "FERTILIZER",
+          "last_unit_price": 19,
+          "money": 39,
+          "operation": "SELL",
+          "player": 0,
+          "step": 680,
+          "units": 2
+        },
+        {
+          "first_unit_price": 243,
+          "item": "WOOL",
+          "last_unit_price": 241,
+          "money": 2903,
+          "operation": "SELL",
+          "player": 0,
+          "step": 696,
+          "units": 12
+        },
+        {
+          "first_unit_price": 243,
+          "item": "WOOL",
+          "last_unit_price": 241,
+          "money": 2662,
+          "operation": "SELL",
+          "player": 1,
+          "step": 696,
+          "units": 11
+        },
+        {
+          "first_unit_price": 42,
+          "item": "CARROT",
+          "last_unit_price": 40,
+          "money": 494,
+          "operation": "SELL",
+          "player": 0,
+          "step": 718,
+          "units": 12
+        },
+        {
+          "first_unit_price": 68,
+          "item": "MILK",
+          "last_unit_price": 51,
+          "money": 296,
+          "operation": "SELL",
+          "player": 0,
+          "step": 718,
+          "units": 5
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 188,
+          "operation": "SELL",
+          "player": 0,
+          "step": 718,
+          "units": 4
+        },
+        {
+          "first_unit_price": 42,
+          "item": "CARROT",
+          "last_unit_price": 40,
+          "money": 454,
+          "operation": "SELL",
+          "player": 1,
+          "step": 718,
+          "units": 11
+        },
+        {
+          "first_unit_price": 68,
+          "item": "MILK",
+          "last_unit_price": 47,
+          "money": 343,
+          "operation": "SELL",
+          "player": 1,
+          "step": 718,
+          "units": 6
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": 329,
+          "operation": "SELL",
+          "player": 1,
+          "step": 718,
+          "units": 7
+        }
+      ],
+      "scores": [
+        104275.0,
+        102683.0
+      ],
+      "terminal_stock": [
+        {
+          "carried_goods": 0,
+          "seeds": 0,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        },
+        {
+          "carried_goods": 0,
+          "seeds": 0,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        }
+      ],
+      "trace_sha256": "5e6d43aa782b77cf6b66d2d06302bed44bd65eaececd265b08aa7dc704b2abb1",
+      "transaction_totals": [
+        {
+          "item": "COW",
+          "money": -2400,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 6
+        },
+        {
+          "item": "GOOSE",
+          "money": -600,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "SHEEP",
+          "money": -6000,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 12
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -6486,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "units": 172
+        },
+        {
+          "item": "CARROT",
+          "money": -360,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 18
+        },
+        {
+          "item": "MELON",
+          "money": -960,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 12
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 38
+        },
+        {
+          "item": "TOMATO",
+          "money": -100,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -770,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 77
+        },
+        {
+          "item": null,
+          "money": -3238.0,
+          "operation": "HIRE",
+          "player": 0,
+          "units": 261
+        },
+        {
+          "item": "CARROT",
+          "money": 2329,
+          "operation": "SELL",
+          "player": 0,
+          "units": 54
+        },
+        {
+          "item": "EGG",
+          "money": 3594,
+          "operation": "SELL",
+          "player": 0,
+          "units": 65
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12399,
+          "operation": "SELL",
+          "player": 0,
+          "units": 222
+        },
+        {
+          "item": "MELON",
+          "money": 14795,
+          "operation": "SELL",
+          "player": 0,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 6782,
+          "operation": "SELL",
+          "player": 0,
+          "units": 110
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 29336,
+          "operation": "SELL",
+          "player": 0,
+          "units": 265
+        },
+        {
+          "item": "TOMATO",
+          "money": 1163,
+          "operation": "SELL",
+          "player": 0,
+          "units": 12
+        },
+        {
+          "item": "WHEAT",
+          "money": 7231,
+          "operation": "SELL",
+          "player": 0,
+          "units": 176
+        },
+        {
+          "item": "WOOL",
+          "money": 51360,
+          "operation": "SELL",
+          "player": 0,
+          "units": 238
+        },
+        {
+          "item": "COW",
+          "money": -2400,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 6
+        },
+        {
+          "item": "GOOSE",
+          "money": -600,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "SHEEP",
+          "money": -6000,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 12
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -6580,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "units": 174
+        },
+        {
+          "item": "CARROT",
+          "money": -360,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 18
+        },
+        {
+          "item": "MELON",
+          "money": -960,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 12
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 38
+        },
+        {
+          "item": "TOMATO",
+          "money": -100,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -770,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 77
+        },
+        {
+          "item": null,
+          "money": -3238.0,
+          "operation": "HIRE",
+          "player": 1,
+          "units": 261
+        },
+        {
+          "item": "CARROT",
+          "money": 2289,
+          "operation": "SELL",
+          "player": 1,
+          "units": 53
+        },
+        {
+          "item": "EGG",
+          "money": 3594,
+          "operation": "SELL",
+          "player": 1,
+          "units": 65
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12350,
+          "operation": "SELL",
+          "player": 1,
+          "units": 220
+        },
+        {
+          "item": "MELON",
+          "money": 14795,
+          "operation": "SELL",
+          "player": 1,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 6775,
+          "operation": "SELL",
+          "player": 1,
+          "units": 111
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 27900,
+          "operation": "SELL",
+          "player": 1,
+          "units": 264
+        },
+        {
+          "item": "TOMATO",
+          "money": 1156,
+          "operation": "SELL",
+          "player": 1,
+          "units": 12
+        },
+        {
+          "item": "WHEAT",
+          "money": 7513,
+          "operation": "SELL",
+          "player": 1,
+          "units": 182
+        },
+        {
+          "item": "WOOL",
+          "money": 51119,
+          "operation": "SELL",
+          "player": 1,
+          "units": 237
+        }
+      ],
+      "verified_poststates": 1438
+    },
+    {
+      "accounting_note": "Money records successful official-engine commits only; positive sales and negative purchases/hire/land are realized flows.",
+      "cash_reconciliation": [
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 0,
+          "realized_net_commits": 82226.0,
+          "terminal_money": 85226.0
+        },
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 1,
+          "realized_net_commits": 80893.0,
+          "terminal_money": 83893.0
+        }
+      ],
+      "file": "seed-930132-seat-0.jsonl.gz",
+      "first_action_divergence": {
+        "day": 5,
+        "hour": 9,
+        "step": 129
+      },
+      "job": {
+        "candidate": "candidates/k_pro6_care_fp.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 0,
+        "seed": 930132
+      },
+      "localized_transactions": [
+        {
+          "first_unit_price": 500,
+          "item": "SHEEP",
+          "last_unit_price": 500,
+          "money": -500,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "step": 313,
+          "units": 1
+        },
+        {
+          "first_unit_price": 191,
+          "item": "MILK",
+          "last_unit_price": 185,
+          "money": 1128,
+          "operation": "SELL",
+          "player": 1,
+          "step": 352,
+          "units": 6
+        },
+        {
+          "first_unit_price": 186,
+          "item": "MILK",
+          "last_unit_price": 143,
+          "money": 1941,
+          "operation": "SELL",
+          "player": 0,
+          "step": 360,
+          "units": 12
+        },
+        {
+          "first_unit_price": 186,
+          "item": "MILK",
+          "last_unit_price": 158,
+          "money": 1050,
+          "operation": "SELL",
+          "player": 1,
+          "step": 360,
+          "units": 6
+        },
+        {
+          "first_unit_price": 156,
+          "item": "MILK",
+          "last_unit_price": 131,
+          "money": 1003,
+          "operation": "SELL",
+          "player": 0,
+          "step": 384,
+          "units": 7
+        },
+        {
+          "first_unit_price": 156,
+          "item": "MILK",
+          "last_unit_price": 118,
+          "money": 1613,
+          "operation": "SELL",
+          "player": 1,
+          "step": 384,
+          "units": 12
+        },
+        {
+          "first_unit_price": 197,
+          "item": "STRAWBERRY",
+          "last_unit_price": 193,
+          "money": 1560,
+          "operation": "SELL",
+          "player": 0,
+          "step": 455,
+          "units": 8
+        },
+        {
+          "first_unit_price": 193,
+          "item": "STRAWBERRY",
+          "last_unit_price": 160,
+          "money": 4808,
+          "operation": "SELL",
+          "player": 0,
+          "step": 456,
+          "units": 27
+        },
+        {
+          "first_unit_price": 199,
+          "item": "WOOL",
+          "last_unit_price": 164,
+          "money": 2229,
+          "operation": "SELL",
+          "player": 0,
+          "step": 456,
+          "units": 12
+        },
+        {
+          "first_unit_price": 193,
+          "item": "STRAWBERRY",
+          "last_unit_price": 151,
+          "money": 6050,
+          "operation": "SELL",
+          "player": 1,
+          "step": 456,
+          "units": 35
+        },
+        {
+          "first_unit_price": 199,
+          "item": "WOOL",
+          "last_unit_price": 144,
+          "money": 2984,
+          "operation": "SELL",
+          "player": 1,
+          "step": 456,
+          "units": 17
+        },
+        {
+          "first_unit_price": 112,
+          "item": "STRAWBERRY",
+          "last_unit_price": 103,
+          "money": 645,
+          "operation": "SELL",
+          "player": 0,
+          "step": 526,
+          "units": 6
+        },
+        {
+          "first_unit_price": 176,
+          "item": "MELON",
+          "last_unit_price": 131,
+          "money": 2717,
+          "operation": "SELL",
+          "player": 0,
+          "step": 528,
+          "units": 18
+        },
+        {
+          "first_unit_price": 224,
+          "item": "WOOL",
+          "last_unit_price": 198,
+          "money": 2546,
+          "operation": "SELL",
+          "player": 0,
+          "step": 528,
+          "units": 12
+        },
+        {
+          "first_unit_price": 176,
+          "item": "MELON",
+          "last_unit_price": 158,
+          "money": 1003,
+          "operation": "SELL",
+          "player": 1,
+          "step": 528,
+          "units": 6
+        },
+        {
+          "first_unit_price": 224,
+          "item": "WOOL",
+          "last_unit_price": 193,
+          "money": 3324,
+          "operation": "SELL",
+          "player": 1,
+          "step": 528,
+          "units": 16
+        },
+        {
+          "first_unit_price": 223,
+          "item": "WOOL",
+          "last_unit_price": 221,
+          "money": 887,
+          "operation": "SELL",
+          "player": 0,
+          "step": 551,
+          "units": 4
+        },
+        {
+          "first_unit_price": 68,
+          "item": "STRAWBERRY",
+          "last_unit_price": 12,
+          "money": 1208,
+          "operation": "SELL",
+          "player": 0,
+          "step": 552,
+          "units": 30
+        },
+        {
+          "first_unit_price": 131,
+          "item": "MELON",
+          "last_unit_price": 120,
+          "money": 754,
+          "operation": "SELL",
+          "player": 1,
+          "step": 552,
+          "units": 6
+        },
+        {
+          "first_unit_price": 11,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 68,
+          "operation": "SELL",
+          "player": 1,
+          "step": 552,
+          "units": 38
+        },
+        {
+          "first_unit_price": 120,
+          "item": "MELON",
+          "last_unit_price": 108,
+          "money": 685,
+          "operation": "SELL",
+          "player": 1,
+          "step": 576,
+          "units": 6
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 227,
+          "money": 2527,
+          "operation": "SELL",
+          "player": 0,
+          "step": 600,
+          "units": 11
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 224,
+          "money": 3653,
+          "operation": "SELL",
+          "player": 1,
+          "step": 600,
+          "units": 16
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 229,
+          "money": 1842,
+          "operation": "SELL",
+          "player": 0,
+          "step": 624,
+          "units": 8
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 230,
+          "money": 924,
+          "operation": "SELL",
+          "player": 1,
+          "step": 624,
+          "units": 4
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -517,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 625,
+          "units": 11
+        },
+        {
+          "first_unit_price": 236,
+          "item": "WOOL",
+          "last_unit_price": 235,
+          "money": 941,
+          "operation": "SELL",
+          "player": 0,
+          "step": 653,
+          "units": 4
+        },
+        {
+          "first_unit_price": 235,
+          "item": "WOOL",
+          "last_unit_price": 235,
+          "money": 940,
+          "operation": "SELL",
+          "player": 1,
+          "step": 654,
+          "units": 4
+        },
+        {
+          "first_unit_price": 237,
+          "item": "WOOL",
+          "last_unit_price": 236,
+          "money": 945,
+          "operation": "SELL",
+          "player": 1,
+          "step": 669,
+          "units": 4
+        },
+        {
+          "first_unit_price": 236,
+          "item": "WOOL",
+          "last_unit_price": 235,
+          "money": 1883,
+          "operation": "SELL",
+          "player": 0,
+          "step": 670,
+          "units": 8
+        },
+        {
+          "first_unit_price": 236,
+          "item": "WOOL",
+          "last_unit_price": 235,
+          "money": 943,
+          "operation": "SELL",
+          "player": 1,
+          "step": 670,
+          "units": 4
+        },
+        {
+          "first_unit_price": 112,
+          "item": "STRAWBERRY",
+          "last_unit_price": 108,
+          "money": 220,
+          "operation": "SELL",
+          "player": 0,
+          "step": 671,
+          "units": 2
+        },
+        {
+          "first_unit_price": 112,
+          "item": "STRAWBERRY",
+          "last_unit_price": 85,
+          "money": 1265,
+          "operation": "SELL",
+          "player": 1,
+          "step": 671,
+          "units": 13
+        },
+        {
+          "first_unit_price": 234,
+          "item": "WOOL",
+          "last_unit_price": 234,
+          "money": 702,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 3
+        },
+        {
+          "first_unit_price": 234,
+          "item": "WOOL",
+          "last_unit_price": 233,
+          "money": 1867,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 8
+        },
+        {
+          "first_unit_price": 236,
+          "item": "WOOL",
+          "last_unit_price": 235,
+          "money": 1884,
+          "operation": "SELL",
+          "player": 0,
+          "step": 696,
+          "units": 8
+        },
+        {
+          "first_unit_price": 236,
+          "item": "WOOL",
+          "last_unit_price": 236,
+          "money": 944,
+          "operation": "SELL",
+          "player": 1,
+          "step": 696,
+          "units": 4
+        }
+      ],
+      "scores": [
+        85226.0,
+        83893.0
+      ],
+      "terminal_stock": [
+        {
+          "carried_goods": 0,
+          "seeds": 1,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        },
+        {
+          "carried_goods": 0,
+          "seeds": 1,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        }
+      ],
+      "trace_sha256": "75f7ac345bc8863fba75087eeec829116e47f75438c282d2042f0e70b19f5069",
+      "transaction_totals": [
+        {
+          "item": "COW",
+          "money": -4000,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 10
+        },
+        {
+          "item": "GOOSE",
+          "money": -600,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "SHEEP",
+          "money": -3000,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 6
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -6440,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "units": 170
+        },
+        {
+          "item": "CARROT",
+          "money": -380,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 19
+        },
+        {
+          "item": "MELON",
+          "money": -1040,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 13
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 38
+        },
+        {
+          "item": "WHEAT",
+          "money": -770,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 77
+        },
+        {
+          "item": null,
+          "money": -3238.0,
+          "operation": "HIRE",
+          "player": 0,
+          "units": 261
+        },
+        {
+          "item": "CARROT",
+          "money": 2226,
+          "operation": "SELL",
+          "player": 0,
+          "units": 57
+        },
+        {
+          "item": "EGG",
+          "money": 3686,
+          "operation": "SELL",
+          "player": 0,
+          "units": 62
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12654,
+          "operation": "SELL",
+          "player": 0,
+          "units": 236
+        },
+        {
+          "item": "MELON",
+          "money": 14951,
+          "operation": "SELL",
+          "player": 0,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 11854,
+          "operation": "SELL",
+          "player": 0,
+          "units": 199
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 28212,
+          "operation": "SELL",
+          "player": 0,
+          "units": 272
+        },
+        {
+          "item": "WHEAT",
+          "money": 7449,
+          "operation": "SELL",
+          "player": 0,
+          "units": 179
+        },
+        {
+          "item": "WOOL",
+          "money": 27462,
+          "operation": "SELL",
+          "player": 0,
+          "units": 157
+        },
+        {
+          "item": "COW",
+          "money": -4000,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 10
+        },
+        {
+          "item": "GOOSE",
+          "money": -600,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "SHEEP",
+          "money": -3500,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 7
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -6434,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "units": 169
+        },
+        {
+          "item": "CARROT",
+          "money": -380,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 19
+        },
+        {
+          "item": "MELON",
+          "money": -1040,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 13
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 38
+        },
+        {
+          "item": "WHEAT",
+          "money": -770,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 77
+        },
+        {
+          "item": null,
+          "money": -3238.0,
+          "operation": "HIRE",
+          "player": 1,
+          "units": 261
+        },
+        {
+          "item": "CARROT",
+          "money": 2171,
+          "operation": "SELL",
+          "player": 1,
+          "units": 56
+        },
+        {
+          "item": "EGG",
+          "money": 3649,
+          "operation": "SELL",
+          "player": 1,
+          "units": 61
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12306,
+          "operation": "SELL",
+          "player": 1,
+          "units": 229
+        },
+        {
+          "item": "MELON",
+          "money": 14676,
+          "operation": "SELL",
+          "player": 1,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 12426,
+          "operation": "SELL",
+          "player": 1,
+          "units": 188
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 26812,
+          "operation": "SELL",
+          "player": 1,
+          "units": 272
+        },
+        {
+          "item": "WHEAT",
+          "money": 7052,
+          "operation": "SELL",
+          "player": 1,
+          "units": 170
+        },
+        {
+          "item": "WOOL",
+          "money": 28563,
+          "operation": "SELL",
+          "player": 1,
+          "units": 165
+        }
+      ],
+      "verified_poststates": 1438
+    },
+    {
+      "accounting_note": "Money records successful official-engine commits only; positive sales and negative purchases/hire/land are realized flows.",
+      "cash_reconciliation": [
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 0,
+          "realized_net_commits": 83376.0,
+          "terminal_money": 86376.0
+        },
+        {
+          "difference": 0.0,
+          "initial_money": 3000.0,
+          "player": 1,
+          "realized_net_commits": 79409.0,
+          "terminal_money": 82409.0
+        }
+      ],
+      "file": "seed-930132-seat-1.jsonl.gz",
+      "first_action_divergence": {
+        "day": 5,
+        "hour": 9,
+        "step": 129
+      },
+      "job": {
+        "candidate": "candidates/k_pro6_care_fp.py",
+        "opponent": "k_pro/k_pro6.py",
+        "seat": 1,
+        "seed": 930132
+      },
+      "localized_transactions": [
+        {
+          "first_unit_price": 191,
+          "item": "MILK",
+          "last_unit_price": 185,
+          "money": 1128,
+          "operation": "SELL",
+          "player": 1,
+          "step": 352,
+          "units": 6
+        },
+        {
+          "first_unit_price": 186,
+          "item": "MILK",
+          "last_unit_price": 143,
+          "money": 1941,
+          "operation": "SELL",
+          "player": 0,
+          "step": 360,
+          "units": 12
+        },
+        {
+          "first_unit_price": 186,
+          "item": "MILK",
+          "last_unit_price": 158,
+          "money": 1050,
+          "operation": "SELL",
+          "player": 1,
+          "step": 360,
+          "units": 6
+        },
+        {
+          "first_unit_price": 156,
+          "item": "MILK",
+          "last_unit_price": 131,
+          "money": 1003,
+          "operation": "SELL",
+          "player": 0,
+          "step": 384,
+          "units": 7
+        },
+        {
+          "first_unit_price": 156,
+          "item": "MILK",
+          "last_unit_price": 118,
+          "money": 1613,
+          "operation": "SELL",
+          "player": 1,
+          "step": 384,
+          "units": 12
+        },
+        {
+          "first_unit_price": 197,
+          "item": "STRAWBERRY",
+          "last_unit_price": 193,
+          "money": 1560,
+          "operation": "SELL",
+          "player": 0,
+          "step": 455,
+          "units": 8
+        },
+        {
+          "first_unit_price": 193,
+          "item": "STRAWBERRY",
+          "last_unit_price": 160,
+          "money": 4808,
+          "operation": "SELL",
+          "player": 0,
+          "step": 456,
+          "units": 27
+        },
+        {
+          "first_unit_price": 199,
+          "item": "WOOL",
+          "last_unit_price": 164,
+          "money": 2229,
+          "operation": "SELL",
+          "player": 0,
+          "step": 456,
+          "units": 12
+        },
+        {
+          "first_unit_price": 193,
+          "item": "STRAWBERRY",
+          "last_unit_price": 151,
+          "money": 6050,
+          "operation": "SELL",
+          "player": 1,
+          "step": 456,
+          "units": 35
+        },
+        {
+          "first_unit_price": 199,
+          "item": "WOOL",
+          "last_unit_price": 144,
+          "money": 2984,
+          "operation": "SELL",
+          "player": 1,
+          "step": 456,
+          "units": 17
+        },
+        {
+          "first_unit_price": 112,
+          "item": "STRAWBERRY",
+          "last_unit_price": 103,
+          "money": 645,
+          "operation": "SELL",
+          "player": 0,
+          "step": 526,
+          "units": 6
+        },
+        {
+          "first_unit_price": 176,
+          "item": "MELON",
+          "last_unit_price": 131,
+          "money": 2717,
+          "operation": "SELL",
+          "player": 0,
+          "step": 528,
+          "units": 18
+        },
+        {
+          "first_unit_price": 224,
+          "item": "WOOL",
+          "last_unit_price": 198,
+          "money": 2546,
+          "operation": "SELL",
+          "player": 0,
+          "step": 528,
+          "units": 12
+        },
+        {
+          "first_unit_price": 176,
+          "item": "MELON",
+          "last_unit_price": 158,
+          "money": 1003,
+          "operation": "SELL",
+          "player": 1,
+          "step": 528,
+          "units": 6
+        },
+        {
+          "first_unit_price": 224,
+          "item": "WOOL",
+          "last_unit_price": 193,
+          "money": 3324,
+          "operation": "SELL",
+          "player": 1,
+          "step": 528,
+          "units": 16
+        },
+        {
+          "first_unit_price": 223,
+          "item": "WOOL",
+          "last_unit_price": 221,
+          "money": 887,
+          "operation": "SELL",
+          "player": 0,
+          "step": 551,
+          "units": 4
+        },
+        {
+          "first_unit_price": 68,
+          "item": "STRAWBERRY",
+          "last_unit_price": 12,
+          "money": 1208,
+          "operation": "SELL",
+          "player": 0,
+          "step": 552,
+          "units": 30
+        },
+        {
+          "first_unit_price": 131,
+          "item": "MELON",
+          "last_unit_price": 120,
+          "money": 754,
+          "operation": "SELL",
+          "player": 1,
+          "step": 552,
+          "units": 6
+        },
+        {
+          "first_unit_price": 11,
+          "item": "STRAWBERRY",
+          "last_unit_price": 1,
+          "money": 68,
+          "operation": "SELL",
+          "player": 1,
+          "step": 552,
+          "units": 38
+        },
+        {
+          "first_unit_price": 120,
+          "item": "MELON",
+          "last_unit_price": 108,
+          "money": 685,
+          "operation": "SELL",
+          "player": 1,
+          "step": 576,
+          "units": 6
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 227,
+          "money": 2527,
+          "operation": "SELL",
+          "player": 0,
+          "step": 600,
+          "units": 11
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 224,
+          "money": 3653,
+          "operation": "SELL",
+          "player": 1,
+          "step": 600,
+          "units": 16
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 229,
+          "money": 1842,
+          "operation": "SELL",
+          "player": 0,
+          "step": 624,
+          "units": 8
+        },
+        {
+          "first_unit_price": 232,
+          "item": "WOOL",
+          "last_unit_price": 230,
+          "money": 924,
+          "operation": "SELL",
+          "player": 1,
+          "step": 624,
+          "units": 4
+        },
+        {
+          "first_unit_price": 47,
+          "item": "WHEAT",
+          "last_unit_price": 47,
+          "money": -517,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "step": 625,
+          "units": 11
+        },
+        {
+          "first_unit_price": 235,
+          "item": "WOOL",
+          "last_unit_price": 235,
+          "money": 940,
+          "operation": "SELL",
+          "player": 0,
+          "step": 652,
+          "units": 4
+        },
+        {
+          "first_unit_price": 235,
+          "item": "WOOL",
+          "last_unit_price": 235,
+          "money": 940,
+          "operation": "SELL",
+          "player": 1,
+          "step": 653,
+          "units": 4
+        },
+        {
+          "first_unit_price": 236,
+          "item": "WOOL",
+          "last_unit_price": 236,
+          "money": 944,
+          "operation": "SELL",
+          "player": 1,
+          "step": 667,
+          "units": 4
+        },
+        {
+          "first_unit_price": 236,
+          "item": "WOOL",
+          "last_unit_price": 235,
+          "money": 1885,
+          "operation": "SELL",
+          "player": 1,
+          "step": 670,
+          "units": 8
+        },
+        {
+          "first_unit_price": 112,
+          "item": "STRAWBERRY",
+          "last_unit_price": 85,
+          "money": 1265,
+          "operation": "SELL",
+          "player": 0,
+          "step": 671,
+          "units": 13
+        },
+        {
+          "first_unit_price": 112,
+          "item": "STRAWBERRY",
+          "last_unit_price": 108,
+          "money": 220,
+          "operation": "SELL",
+          "player": 1,
+          "step": 671,
+          "units": 2
+        },
+        {
+          "first_unit_price": 235,
+          "item": "WOOL",
+          "last_unit_price": 233,
+          "money": 2571,
+          "operation": "SELL",
+          "player": 0,
+          "step": 672,
+          "units": 11
+        },
+        {
+          "first_unit_price": 235,
+          "item": "WOOL",
+          "last_unit_price": 234,
+          "money": 938,
+          "operation": "SELL",
+          "player": 1,
+          "step": 672,
+          "units": 4
+        },
+        {
+          "first_unit_price": 235,
+          "item": "WOOL",
+          "last_unit_price": 235,
+          "money": 940,
+          "operation": "SELL",
+          "player": 0,
+          "step": 688,
+          "units": 4
+        },
+        {
+          "first_unit_price": 48,
+          "item": "WHEAT",
+          "last_unit_price": 48,
+          "money": 960,
+          "operation": "SELL",
+          "player": 0,
+          "step": 718,
+          "units": 20
+        },
+        {
+          "first_unit_price": 48,
+          "item": "WHEAT",
+          "last_unit_price": 48,
+          "money": 240,
+          "operation": "SELL",
+          "player": 1,
+          "step": 718,
+          "units": 5
+        }
+      ],
+      "scores": [
+        86376.0,
+        82409.0
+      ],
+      "terminal_stock": [
+        {
+          "carried_goods": 0,
+          "seeds": 1,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        },
+        {
+          "carried_goods": 0,
+          "seeds": 2,
+          "shed_goods": 0,
+          "tile_yield_units": 0
+        }
+      ],
+      "trace_sha256": "b563156ace84fdb233d9e56c1216a160c69150f48e47f5b6552377a889dc90c2",
+      "transaction_totals": [
+        {
+          "item": "COW",
+          "money": -4000,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 10
+        },
+        {
+          "item": "GOOSE",
+          "money": -600,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "SHEEP",
+          "money": -3000,
+          "operation": "BUY_ANIMAL",
+          "player": 0,
+          "units": 6
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 0,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -6488,
+          "operation": "BUY_PRODUCT",
+          "player": 0,
+          "units": 171
+        },
+        {
+          "item": "CARROT",
+          "money": -360,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 18
+        },
+        {
+          "item": "MELON",
+          "money": -1040,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 13
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 38
+        },
+        {
+          "item": "WHEAT",
+          "money": -780,
+          "operation": "BUY_SEED",
+          "player": 0,
+          "units": 78
+        },
+        {
+          "item": null,
+          "money": -3238.0,
+          "operation": "HIRE",
+          "player": 0,
+          "units": 261
+        },
+        {
+          "item": "CARROT",
+          "money": 2118,
+          "operation": "SELL",
+          "player": 0,
+          "units": 54
+        },
+        {
+          "item": "EGG",
+          "money": 3811,
+          "operation": "SELL",
+          "player": 0,
+          "units": 64
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12653,
+          "operation": "SELL",
+          "player": 0,
+          "units": 236
+        },
+        {
+          "item": "MELON",
+          "money": 14951,
+          "operation": "SELL",
+          "player": 0,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 11919,
+          "operation": "SELL",
+          "player": 0,
+          "units": 200
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 29134,
+          "operation": "SELL",
+          "player": 0,
+          "units": 271
+        },
+        {
+          "item": "WHEAT",
+          "money": 7651,
+          "operation": "SELL",
+          "player": 0,
+          "units": 183
+        },
+        {
+          "item": "WOOL",
+          "money": 27445,
+          "operation": "SELL",
+          "player": 0,
+          "units": 157
+        },
+        {
+          "item": "COW",
+          "money": -4000,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 10
+        },
+        {
+          "item": "GOOSE",
+          "money": -600,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "SHEEP",
+          "money": -3500,
+          "operation": "BUY_ANIMAL",
+          "player": 1,
+          "units": 7
+        },
+        {
+          "item": null,
+          "money": -3000.0,
+          "operation": "BUY_LAND",
+          "player": 1,
+          "units": 2
+        },
+        {
+          "item": "WHEAT",
+          "money": -6386,
+          "operation": "BUY_PRODUCT",
+          "player": 1,
+          "units": 168
+        },
+        {
+          "item": "CARROT",
+          "money": -360,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 18
+        },
+        {
+          "item": "MELON",
+          "money": -1040,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 13
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": -3800,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 38
+        },
+        {
+          "item": "WHEAT",
+          "money": -760,
+          "operation": "BUY_SEED",
+          "player": 1,
+          "units": 76
+        },
+        {
+          "item": null,
+          "money": -3238.0,
+          "operation": "HIRE",
+          "player": 1,
+          "units": 261
+        },
+        {
+          "item": "CARROT",
+          "money": 2027,
+          "operation": "SELL",
+          "player": 1,
+          "units": 52
+        },
+        {
+          "item": "EGG",
+          "money": 3524,
+          "operation": "SELL",
+          "player": 1,
+          "units": 59
+        },
+        {
+          "item": "FERTILIZER",
+          "money": 12315,
+          "operation": "SELL",
+          "player": 1,
+          "units": 230
+        },
+        {
+          "item": "MELON",
+          "money": 14676,
+          "operation": "SELL",
+          "player": 1,
+          "units": 72
+        },
+        {
+          "item": "MILK",
+          "money": 12366,
+          "operation": "SELL",
+          "player": 1,
+          "units": 188
+        },
+        {
+          "item": "STRAWBERRY",
+          "money": 25895,
+          "operation": "SELL",
+          "player": 1,
+          "units": 272
+        },
+        {
+          "item": "WHEAT",
+          "money": 6717,
+          "operation": "SELL",
+          "player": 1,
+          "units": 163
+        },
+        {
+          "item": "WOOL",
+          "money": 28573,
+          "operation": "SELL",
+          "player": 1,
+          "units": 165
+        }
+      ],
+      "verified_poststates": 1438
+    }
+  ]
+}
