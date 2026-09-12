@@ -79,3 +79,6 @@ CARE expérimental dans `candidates/`, sans modifier K Pro6 livré.
 Les deux banques totalisent 4 400 matchs valides. Le signal sur les victoires
 est favorable, mais le critère de marge en confirmation n’est pas satisfait :
 le candidat reste expérimental. Voir le [rapport et la décision](docs/reports/2026-09-09-measure-care.md).
+Le [diagnostic économique localisé](docs/reports/2026-09-12-diagnose-care.md)
+documente ensuite six replays B et trois contrôles parent-self, sans nouvelle
+conclusion de performance ni modification de K Pro6.

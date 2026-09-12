@@ -63,6 +63,31 @@ Le moteur résout719 décisions et720 états, initial compris. Le seed est retir
 
 Le même seed ne fige pas les commerces lorsque les cases vides changent : le RNG des mauvaises herbes et du commerce journalier est partagé dans le moteur officiel. Les deux sièges et les diagnostics par trajectoire restent nécessaires.
 
+## Replays économiques diagnostiques
+
+Les six traces B publiées dans `results/diagnose-care-c/` se rejouent avec les
+actions enregistrées. Le diagnostic entoure passivement les commits du moteur
+officiel et vérifie chaque pré-état et post-état avant d'agréger les flux
+réalisés. Il ne déduit pas de recette brute d'un delta net ou d'un prix coté.
+
+```bash
+python -m evaluation.diagnose results/diagnose-care-c/*.jsonl.gz \
+  --output /tmp/diagnose-care.json \
+  --swap-replay results/diagnose-care-c/seed-930053-seat-0.jsonl.gz \
+  --swap-player 0 --swap-step 672 --swap-slots 1 2
+```
+
+La sortie est créée exclusivement et contient les SHA-256 des traces, les
+agrégats de commits, la réconciliation du cash, les stocks terminaux et des
+exemples localisés. Le swap optionnel exécute seulement l'étape indiquée avec
+deux emplacements de marché échangés; ce n'est ni une politique ni un replay
+complet contrefactuel.
+
+`results/diagnose-care-controls-final/` contient trois parties K Pro6 contre
+lui-même, une par graine et avec les deux fermes conservées. Elles sont
+explicitement distinctes des six lignes B et servent seulement à exposer
+l'asymétrie initiale/de siège.
+
 ## Limites
 
 Le banc appelle l'interpréteur et le sélecteur de callable officiels, avec orchestration locale. Un hook d'audit Python interdit les sockets, requêtes HTTP, appels ctypes et processus externes pendant le chargement et les décisions. Il est destiné aux politiques K Pro autonomes de confiance : ce n'est pas une frontière de sécurité contre du code hostile. Le banc n'émule ni le sandbox ni les limites de temps/overage du framework distant. Il n'établit pas une parité intégrale avec tous les comportements du package `kaggle_environments`. Les temps de décision sous charge locale ne garantissent pas les délais sur Kaggle. Les sources officielles sont conservées exactement ; deux fonctions auxiliaires sont extraites par AST pour éviter les dépendances externes. Le pont moteur ne modifie pas `sys.modules` ; le chargeur restaure son état après les imports de politique.
