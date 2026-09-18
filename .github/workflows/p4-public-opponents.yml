@@ -1,0 +1,58 @@
+name: P4 public opponent retrieval
+
+on:
+  push:
+    branches: ['agent/p4-public-opponents-20260918']
+    paths: ['.github/workflows/p4-public-opponents.yml']
+
+permissions: {}
+
+jobs:
+  retrieve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch public source bytes and verify Git blobs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import urllib.request
+          output = pathlib.Path('public-opponents')
+          output.mkdir()
+          repository = 'IMINABO1/kaggriculture'
+          commit = 'dfa050c46e0511896aaf756f51382dc1742eff0d'
+          entries = [
+              ('agent/line_v7.py', '436198f8f2b79a208b2255cd731b81251f32560b'),
+              ('agent/line_v41.py', 'f91d3f31fbe32029e702df980a5b7f4bec3e8aba'),
+              ('NOTICE.md', '36a6a67b4b6310e8a0b11c03ceb737ecd4d1bee8'),
+          ]
+          manifest = []
+          for source, expected_blob in entries:
+              url = f'https://raw.githubusercontent.com/{repository}/{commit}/{source}'
+              request = urllib.request.Request(url, headers={'User-Agent': 'KPro-public-validation'})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  payload = response.read(2_000_001)
+              if len(payload) > 2_000_000:
+                  raise RuntimeError('Unexpected source size')
+              actual_blob = hashlib.sha1(b'blob ' + str(len(payload)).encode() + b'\0' + payload).hexdigest()
+              if actual_blob != expected_blob:
+                  raise RuntimeError(f'Git blob mismatch for {source}: {actual_blob}')
+              target = pathlib.Path(source).name
+              (output / target).write_bytes(payload)
+              manifest.append({'path': target, 'source': url, 'repository': repository,
+                               'commit': commit, 'git_blob': actual_blob,
+                               'sha256': hashlib.sha256(payload).hexdigest(), 'size': len(payload)})
+          (output / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+          print(json.dumps(manifest, indent=2))
+          PY
+      - name: Return source artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p4-public-opponents
+          path: public-opponents/
+          retention-days: 7
+          if-no-files-found: error
